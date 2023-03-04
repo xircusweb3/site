@@ -1,4 +1,4 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, localStorageManager } from '@chakra-ui/react'
 import { NextIntlProvider } from 'next-intl';
 import Head from 'next/head'
 import { XIRCUS_TITLE, XIRCUS_DESC, XIRCUS_URL, XIRCUS_IMAGE } from '../constants'
@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps, router }) {
   const messages = require(`../i18n/${router.locale}.json`)
   return (
     <NextIntlProvider messages={messages}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme} colorModeManager={localStorageManager}>
         <Head>
           <title>{XIRCUS_TITLE}</title>
           <meta name="title" content={XIRCUS_TITLE} />
