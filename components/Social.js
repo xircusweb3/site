@@ -57,10 +57,10 @@ export const Social = () => {
         <Heading>{t('title1')}</Heading>
         <GradientHeading>{t('title2')}</GradientHeading>
         <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }} gap={4} my={12} py={12} bg="#1E1A1D" rounded="lg">
-          <Stat value="34k" label={t('followers')} />
+          <Stat value="24k" label={t('followers')} />
           <Stat value="124k" label={t('impressions')} />          
           <Stat value="45k" label={t('likes')} />          
-          <Stat value="456k" label={t('members')} />          
+          <Stat value="35k" label={t('members')} />          
         </Grid>
         <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} gap={6}>
           <Box rounded="lg" overflow="hidden">

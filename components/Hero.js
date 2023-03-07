@@ -40,7 +40,7 @@ const btnStyle = {
 export const Hero = () => {
   const t = useTranslations('hero')
   return (
-    <Box bgImage="xircus-globe.png" minH={{ base: 400, md: 600 }} bgSize="contain" bgRepeat="no-repeat" bgPos={{  base: 'right -160px top 50%', sm: 'right -50px top 50%', md: 'right center'}}>
+    <Box id="intro" bgImage="xircus-globe.png" minH={{ base: 400, md: 600 }} bgSize="contain" bgRepeat="no-repeat" bgPos={{  base: 'right -160px top 50%', sm: 'right -50px top 50%', md: 'right center'}}>
       <Container maxW="container.xl" py={{ base: 20, md: 40 }}>
         <Box mb={{ base: 6, md: 8 }}>
           <Heading {...headingStyle}><Box {...gradientTextStyle}>{t('title1')}</Box></Heading>

@@ -1,12 +1,13 @@
 import { useRef } from 'react'
 import {
   Box, Container, Heading, Wrap,
-  Image, Text, Badge,
+  Image, Text, Badge, Tooltip, Button,
 } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl'
 import { MotionVStack } from './Motion'
 import { Zoom } from 'react-awesome-reveal'
 import { GradientHeading } from './Gradient';
+import { TbExternalLink } from 'react-icons/tb';
 
 const items = [
   {
@@ -29,6 +30,10 @@ const items = [
     image: 'fantom-white.png',
     title: 'Fantom',
   },
+  {
+    image: 'iotex-white.svg',
+    title: 'IoTeX',
+  },  
   {
     image: 'moonbeam-white.png',
     title: 'Moonbeam',
@@ -98,7 +103,7 @@ export const Blockchains = () => {
   const t = useTranslations('blockchains')
 
   return (
-    <Box py={24}>
+    <Box py={24} id="blockchains">
       <Container maxW="container.lg" centerContent textAlign="center">
         <GradientHeading mb={6}>{t('title')}</GradientHeading>
         <Heading size="md" color="gray.500" mb={2}>{t('subtitle')}</Heading>
@@ -107,17 +112,20 @@ export const Blockchains = () => {
           {
             items.map((item, itemKey) => (
               <Zoom key={itemKey}>
-                <MotionVStack
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.8 }}
-                  minW="75px" cursor="pointer">
-                  <Image src={`../assets/images/blockchains/${item.image}`} h="50px" w="auto" alt={item.name} opacity={item.disabled ? '0.5' : '1'} />
-                  { item.status && <Badge borderRadius="full" colorScheme="green" fontSize="10px">{item.status}</Badge> }
-                </MotionVStack>
+                <Tooltip label={item.title}>
+                  <MotionVStack
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    minW="75px" cursor="pointer">
+                    <Image src={`../assets/images/blockchains/${item.image}`} h="50px" w="auto" alt={item.name} opacity={item.disabled ? '0.5' : '1'} />
+                    { item.status && <Badge borderRadius="full" colorScheme="green" fontSize="10px">{item.status}</Badge> }
+                  </MotionVStack>
+                </Tooltip>
               </Zoom>
             ))
           }
         </Wrap>
+        <Button as="a" variant="link" rightIcon={<TbExternalLink />} href="https://beta.xircus.app/developers#chains" target="_blank">View All Supported Chains</Button>
       </Container>
     </Box>
   )

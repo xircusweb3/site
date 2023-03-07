@@ -98,6 +98,7 @@ const Timeline = ({ title, items, side = 'left' }) => {
       pr={{ base: 0, md: side == 'left' && 12 }}
       pl={{ base: 0, md: side == 'right' && 12 }}
       pos="relative"
+      mb={10}
       >
       <Box display={{ base: 'none', md: 'block' }}>
       {
@@ -121,7 +122,7 @@ export const Roadmap = () => {
   const t = useTranslations('roadmap')
 
   return (
-    <Box>
+    <Box id="roadmap">
       <Container maxW="container.xl" pos="relative">
         <Heading mb={12}>{t('title')}</Heading>
         <Box h="full" w="5px" display={{ base: 'none', md: 'block' }} bgGradient="linear(to-t, #FA1A85, #FF8D28)" pos="absolute" left="50%" rounded="full" />

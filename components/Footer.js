@@ -52,21 +52,37 @@ const learnLinks = [
     path: '#intro'
   },
   {
+    key: 'solutions',
+    path: '#solutions'
+  },
+  {
     key: 'features',
     path: '#features'
   },
   {
-    key: 'staking',
-    path: '#staking'
-  },
-  {
-    key: 'xw3',
-    path: '#get-xw3'
+    key: 'blockchains',
+    path: '#blockchains'
   },  
   {
-    key: 'faq',
-    path: '#faq'
+    key: 'products',
+    path: '#products'
   },
+  {
+    key: 'roadmap',
+    path: '#roadmap'
+  },  
+  {
+    key: 'team',
+    path: '#team'
+  },
+  // {
+  //   key: 'xw3',
+  //   path: '#get-xw3'
+  // },  
+  // {
+  //   key: 'faq',
+  //   path: '#faq'
+  // },
 ]
 
 const buildLinks = [
@@ -96,40 +112,49 @@ const buildLinks = [
     target: '_blank'
   },  
   {
+    key: 'storage',
+    path: 'https://beta.xircus.app/developers/#ipfs',
+    target: '_blank'
+  },    
+  {
+    key: 'aggregator',
+    path: '#aggregator'
+  },      
+  {
     key: 'devref',
     path: 'https://xircus-developer.gitbook.io/',
     target: '_blank'
   },
-  {
-    key: 'guides',
-    path: '#guides'
-  },    
+  // {
+  //   key: 'guides',
+  //   path: '#guides'
+  // },    
 ]
 
 const exploreLinks = [
   {
-    key: 'tokens',
-    path: '#tokens'
+    key: 'xw3',
+    path: '#xw3'
   },
   {
     key: 'marketplaces',
-    path: '#features'
+    path: '#marketplaces'
   },
   {
     key: 'defis',
-    path: '#staking'
+    path: '#defis'
   },
   {
     key: 'launchpads',
-    path: '#get-xw3'
+    path: '#launchpads'
   },  
   {
     key: 'predictions',
-    path: '#get-xw3'
+    path: '#predictions'
   },    
   {
     key: 'daos',
-    path: '#faq'
+    path: '#daos'
   },
 ]
 
@@ -140,19 +165,28 @@ const participateLinks = [
   },
   {
     key: 'contributors',
-    path: '#features'
+    path: '#contributors'
   },
   {
     key: 'events',
-    path: '#staking'
+    path: '#events'
   },
   {
     key: 'hackatons',
-    path: '#get-xw3'
+    path: 'https://xircus-apr-hackathon-manila.devpost.com/',
+    target: '_blank'
   }
 ]
 
 const resourceLinks = [
+  {
+    key: 'litepaper',
+    path: '#staking'
+  },  
+  {
+    key: 'investors',
+    path: '#staking'
+  },
   {
     key: 'about',
     path: '#about'

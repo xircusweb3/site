@@ -120,11 +120,16 @@ const headerLinks = [
     key: 'earn',
     href: '#earn'
   },
-  // {
-  //   key: 'docs',
-  //   href: 'https://xircus-developer.gitbook.io/',
-  //   external: true
-  // },
+  {
+    key: 'litepaper',
+    href: '',
+    external: true
+  },
+  {
+    key: 'investors',
+    href: '',
+    external: true
+  },  
 ]
 
 export const Header = () => {

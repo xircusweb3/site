@@ -6,7 +6,7 @@ export const Token = () => {
   const t = useTranslations('token')
 
   return (
-    <Box>
+    <Box id="xw3">
       <Container maxW="container.xl" textAlign="center" my={16}>
         <Stack direction={{ base: 'column', md: 'row' }} justify="center" mb={12}>
           <Heading>{t('title1')}</Heading>

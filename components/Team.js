@@ -19,7 +19,7 @@ const TEAM_ASSETS = '../assets/team/'
 
 export const Team = () => {
   return (
-    <Box py={40}>
+    <Box py={40} id="team">
       <Container maxW="container.lg" centerContent textAlign="center">
         <Box mb={10}>
           <Stack direction={{ base: 'column', md: 'row' }} justify="center" align="center" spacing={12}>

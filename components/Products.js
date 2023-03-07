@@ -86,7 +86,7 @@ export const Products = () => {
   const t = useTranslations('products')
 
   return (
-    <Box>
+    <Box id="products">
       <Container maxW="container.xl" my={12} py={12} bg="#070607">
         <Stack direction={{ base: 'column', md: 'row' }} align="center">
           <Box maxW={440} p={{ base: 0, md: 8 }}>
