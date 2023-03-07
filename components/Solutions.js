@@ -34,7 +34,7 @@ export const Solutions = () => {
       <Container maxW="container.lg">
         <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 6, md: 12 }} align="center" justify="center">
           <Card title={t('title1')} desc={t('desc1')} label={t('label1')} as="a" href="#products" />
-          <Card title={t('title2')} desc={t('desc2')} label={t('label2')} as="a" href="ttps://xircus-developer.gitbook.io/" target="_blank"/>
+          <Card title={t('title2')} desc={t('desc2')} label={t('label2')} as="a" href="https://xircus-developer.gitbook.io/" target="_blank"/>
         </Stack>
       </Container>
     </Box>
