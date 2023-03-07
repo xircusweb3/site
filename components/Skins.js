@@ -2,31 +2,6 @@ import { Avatar, Box, Container, Grid, Heading, HStack, Image } from "@chakra-ui
 import { GradientHeading } from "./Gradient"
 import skins from './skins.json'
 
-console.log("skins", skins)
-
-// const skins = [
-//   {
-//     key: 'general',
-//     name: 'General'
-//   },
-//   {
-//     key: 'music',
-//     name: 'Music'
-//   },
-//   {
-//     key: 'reels',
-//     name: 'Reels'
-//   },
-//   {
-//     key: 'reels',
-//     name: 'Reels'
-//   },
-//   {
-//     key: 'reels',
-//     name: 'Reels'
-//   }      
-// ]
-
 const SkinCard = ({ name, slug }) => (
   <Box bg="#120F11" p={6} minW={200} rounded="md">
     <Image 

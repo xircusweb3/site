@@ -33,19 +33,22 @@ const Article = ({ title, thumbnail, link, pubDate }) => (
 
 export const Social = () => {
   const t = useTranslations('social')
-  const [articles, setArticles] = useState([])
+  // const [articles, setArticles] = useState([])
   const [article, setArticle] = useState(false)
 
   useEffect(() => {
     loadMediumArticles()
   }, [])
 
+  const handleOnReady = (event) => {
+    event.target.pauseVideo()
+  }
+
   const loadMediumArticles = async() => {
     const reply = await fetch(MEDIUM_RSS)
     const result = await reply.json()
     setArticle(result?.items[0])
-    setArticles(result?.items || [])
-    console.log("ITEMS", result.items)
+    // setArticles(result?.items || [])
   }
 
   return (
@@ -71,6 +74,7 @@ export const Social = () => {
             <YouTube
               videoId="isVTDX7cmvM"
               opts={videoOpts}
+              onReady={handleOnReady}
             />
           </Box>
           <Box rounded="lg" overflow="hidden">

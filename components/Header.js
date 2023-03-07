@@ -50,18 +50,20 @@ const ChangeLocale = (props) => (
     onChange={changeLocale}
     {...props}>
     <option value="en">English</option>
-    <option value="zh">中文</option>
-    <option value="ru">Russian</option>
-    <option value="jp">日本</option>
-    <option value="ko">한글</option>
-    <option value="es">Español</option>
-    <option value="pt">Portuguese</option>
-    <option value="ar">Arabic</option>
-    <option value="th">Thai</option>
-    <option value="vi">Tiếng Việt</option>
-    <option value="tr">Turkish</option>
+
   </Select>
 )
+
+{/* <option value="zh">中文</option>
+<option value="ru">Russian</option>
+<option value="jp">日本</option>
+<option value="ko">한글</option>
+<option value="es">Español</option>
+<option value="pt">Portuguese</option>
+<option value="ar">Arabic</option>
+<option value="th">Thai</option>
+<option value="vi">Tiếng Việt</option>
+<option value="tr">Turkish</option> */}
 
 const MobileDrawer = ({ children, isOpen, onClose, ...rest }) => (
   <Drawer isOpen={isOpen} onClose={onClose} {...rest}>
@@ -118,11 +120,11 @@ const headerLinks = [
     key: 'earn',
     href: '#earn'
   },
-  {
-    key: 'docs',
-    href: 'https://xircus-developer.gitbook.io/',
-    external: true
-  },
+  // {
+  //   key: 'docs',
+  //   href: 'https://xircus-developer.gitbook.io/',
+  //   external: true
+  // },
 ]
 
 export const Header = () => {

@@ -3,7 +3,7 @@ import {
   Heading, HStack, VStack, Text,
 } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
-import { Slide, Fade, Flip } from 'react-reveal'
+import { Slide, Fade, Flip } from 'react-awesome-reveal'
 
 const User = ({ avatar, name, role, href = '/' }) => (
   <Fade top cascade>
@@ -18,8 +18,6 @@ const User = ({ avatar, name, role, href = '/' }) => (
 const TEAM_ASSETS = '../assets/team/'
 
 export const Team = () => {
-  const t = useTranslations('team')
-
   return (
     <Box py={40}>
       <Container maxW="container.lg" centerContent textAlign="center">

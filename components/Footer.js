@@ -49,7 +49,7 @@ const SocialLink = ({ icon, url }) => <IconButton as="a" size="sm" variant="ghos
 const learnLinks = [
   {
     key: 'introduction',
-    path: '/intro'
+    path: '#intro'
   },
   {
     key: 'features',
@@ -72,38 +72,44 @@ const learnLinks = [
 const buildLinks = [
   {
     key: 'sdks',
-    path: '/intro'
+    path: 'https://www.npmjs.com/~xircusteam',
+    target: '_blank'
   },
   {
     key: 'contracts',
-    path: '#features'
+    path: 'https://beta.xircus.app/contracts',
+    target: '_blank'
   },
   {
     key: 'graph',
-    path: '#features'
+    path: 'https://beta.xircus.app/providers',
+    target: '_blank'
   },  
   {
     key: 'skins',
-    path: '#staking'
+    path: 'https://beta.xircus.app/skins',
+    target: '_blank'
   },
   {
     key: 'blocks',
-    path: '#get-xw3'
+    path: 'https://beta.xircus.app/providers',
+    target: '_blank'
   },  
   {
     key: 'devref',
-    path: '#faq'
-  },  
+    path: 'https://xircus-developer.gitbook.io/',
+    target: '_blank'
+  },
   {
     key: 'guides',
-    path: '#faq'
+    path: '#guides'
   },    
 ]
 
 const exploreLinks = [
   {
     key: 'tokens',
-    path: '/intro'
+    path: '#tokens'
   },
   {
     key: 'marketplaces',
@@ -130,7 +136,7 @@ const exploreLinks = [
 const participateLinks = [
   {
     key: 'community',
-    path: '/intro'
+    path: '#community'
   },
   {
     key: 'contributors',
@@ -149,11 +155,12 @@ const participateLinks = [
 const resourceLinks = [
   {
     key: 'about',
-    path: '/intro'
+    path: '#about'
   },
   {
     key: 'blog',
-    path: '#features'
+    path: 'https://xircus.medium.com/',
+    target: '_blank'
   },
   {
     key: 'pressKit',
@@ -166,7 +173,15 @@ const Links = ({ title, links = [], t }) => (
     <Heading size="md" mb={4}>{title}</Heading>
     <List spacing={2} fontSize="sm"> 
     {
-      links.map(link => <ListItem key={link.key} display="block" as={Link} href={link.path}>{t(link.key)}</ListItem>)
+      links.map(link => <ListItem 
+        key={link.key} 
+        as={Link} 
+        display="block" 
+        target={link.target} 
+        href={link.path}>
+          {t(link.key)}
+        </ListItem>
+      )
     }
     </List>
   </Box>

@@ -3,7 +3,7 @@ import {
   Container, Image, Avatar
  } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
-import { Slide } from 'react-reveal'
+import { Slide } from 'react-awesome-reveal'
 import { GradientHeading } from './Gradient'
 
 const items = [
@@ -31,7 +31,7 @@ const EarnCard = ({ image, title, text }) => (
 export const Earn = () => {
   const t = useTranslations('earn')
   return (
-    <Box id="how-to-earn">
+    <Box id="earn">
       <Container maxW="container.lg" py={24}>
         <Stack direction={{ base: 'column', md: 'row' }} align="center" justify="center" mb={12}>
           <Heading>{t('title')}</Heading>

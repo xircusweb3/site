@@ -77,9 +77,6 @@ function MyApp({ Component, pageProps, router }) {
           <meta property="twitter:title" content={XIRCUS_TITLE} />
           <meta property="twitter:description" content={XIRCUS_DESC} />
           <meta property="twitter:image" content={XIRCUS_IMAGE} />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="shortcut icon" type="image/png" href="favicon-96x96.png" />
-          <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;300;500;700;900&display=swap" rel="stylesheet"/>
         </Head>
         <Component {...pageProps} />
       </ChakraProvider>

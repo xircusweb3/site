@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Heading, Stack, Text, VStack, Image } from "@chakra-ui/react"
 import { useTranslations } from "next-intl"
 import { GradientHeading } from "./Gradient"
-import { Fade } from 'react-reveal'
+import { Fade } from 'react-awesome-reveal'
 import Link from "next/link"
 
 const products = [

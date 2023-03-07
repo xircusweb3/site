@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl'
 import { MotionVStack } from './Motion'
-import { Zoom } from 'react-reveal'
+import { Zoom } from 'react-awesome-reveal'
 import { GradientHeading } from './Gradient';
 
 const items = [
