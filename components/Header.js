@@ -122,12 +122,12 @@ const headerLinks = [
   },
   {
     key: 'litepaper',
-    href: '',
+    href: 'https://docsend.com/view/gfy4d5uiqkqkie7w',
     external: true
   },
   {
     key: 'investors',
-    href: '',
+    href: 'https://forms.gle/J4wM2KoVdUnmnzVk7?utm_source=website-strategic-investors&utm_medium=homepage&utm_campaign=strategic_investors&utm_id=strategic+investors',
     external: true
   },  
 ]

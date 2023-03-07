@@ -125,6 +125,11 @@ const buildLinks = [
     path: 'https://xircus-developer.gitbook.io/',
     target: '_blank'
   },
+  {
+    key: 'contractref',
+    path: 'https://beta.xircus.app/developers#core',
+    target: '_blank'
+  },  
   // {
   //   key: 'guides',
   //   path: '#guides'
@@ -136,6 +141,16 @@ const exploreLinks = [
     key: 'xw3',
     path: '#xw3'
   },
+  {
+    key: 'currencies',
+    path: 'https://beta.xircus.app/currencies',
+    target: '_blank'
+  },
+  {
+    key: 'deploy',
+    path: 'https://beta.xircus.app/deployer',
+    target: '_blank'
+  },  
   {
     key: 'marketplaces',
     path: '#marketplaces'
@@ -181,11 +196,13 @@ const participateLinks = [
 const resourceLinks = [
   {
     key: 'litepaper',
-    path: '#staking'
+    path: 'https://docsend.com/view/gfy4d5uiqkqkie7w',
+    target: '_blank'
   },  
   {
     key: 'investors',
-    path: '#staking'
+    path: 'https://forms.gle/J4wM2KoVdUnmnzVk7?utm_source=website-strategic-investors&utm_medium=homepage&utm_campaign=strategic_investors&utm_id=strategic+investors',
+    target: '_blank'
   },
   {
     key: 'about',
@@ -197,8 +214,9 @@ const resourceLinks = [
     target: '_blank'
   },
   {
-    key: 'pressKit',
-    path: '#staking'
+    key: 'gitbook',
+    path: 'https://xircus-web3-protocol.gitbook.io/xircus-web3-protocol/',
+    target: '_blank'
   },
 ]
 
@@ -225,7 +243,7 @@ export const Footer = () => {
   const t = useTranslations('footer')
   return (
     <Box>
-      <Container maxW="container.xl" pb={100}>
+      <Container maxW="container.xl" px={{ base: 10, md: 0 }} pb={100}>
         <Grid templateColumns={{ base: 'auto', md: 'repeat(5, 1fr)' }} mb={24}>
           <Links title={t('learn')} links={learnLinks} t={t} />
           <Links title={t('build')} links={buildLinks} t={t} />
