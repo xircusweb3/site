@@ -121,7 +121,7 @@ const headerLinks = [
     href: '#earn'
   },
   {
-    key: 'litepaper',
+    key: 'deck',
     href: 'https://docsend.com/view/gfy4d5uiqkqkie7w',
     external: true
   },
