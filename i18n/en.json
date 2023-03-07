@@ -1,3 +1,150 @@
 {
-  
+  "header": {
+    "title": "XIRCUS",
+    "features": "FEATURES",
+    "products": "PRODUCTS",
+    "solutions": "SOLUTIONS",
+    "resources": "RESOURCES",
+    "earn": "HOW TO EARN",
+    "docs": "DOCS",
+    "getStarted": "GET STARTED"
+  },
+  "hero": {
+    "title1": "Create, Deploy, and",
+    "title2": "Scale",
+    "title3": " Your Web3",
+    "title4": "Experience",
+    "label1": "Deploy your Web3 dApp in minutes",
+    "label2": "bundled with awesome features",
+    "action1": "Join Our Hackaton",
+    "action2": "Get Early Access"
+  },
+  "solutions": {
+    "title1": "No Code",
+    "desc1": "No need to learn web3 architecture, launch with few clicks",
+    "label1": "in minutes",
+    "title2": "Low Code",
+    "desc2": "Build, integrate, customize and launch web3 dApp",
+    "label2": "in a day"
+  },
+  "feats": {
+    "title1": "Grow as",
+    "title2": "you go",
+    "share": "Share Your Revenue",
+    "agnostic": "Fully Agnostic",
+    "rewarding": "Most Rewarding",
+    "democratize": "Democratize Access",
+    "decentralized": "Decentralization",
+    "customizable": "Fully Customizable" 
+  },
+  "reach": {
+    "title": "Reach new heights with Xircus Aggregator - the premier platform for discovering and interacting with deployed dApps & collections"
+  },
+  "social": {
+    "title1": "The Social Metrics That",
+    "title2": "Drive the Protocol",
+    "followers": "Followers",
+    "impressions": "Impressions",
+    "likes": "Likes",
+    "members": "Community Members"
+  },
+  "products": {
+    "title1": "Products we built",
+    "title2": "that scales with you",
+    "desc": "Get started in building your own dApps, currency, crowdfunding campaign and lots more",
+    "sdks": "SDKs",
+    "contracts": "Contracts",
+    "studio": "Studio",
+    "avatars": "Avatar DAO",
+    "skins": "Skin UIs",
+    "blocks": "Block Editor",
+    "providers": "Provider APIs",
+    "currencies": "Currencies"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "title1": "Q1 2023",
+    "title2": "Q2 2023",    
+    "title3": "Q3 2023",
+    "title4": "Q1 2023"    
+  },
+  "earn": {
+    "title": "Earn while",
+    "subtitle": "making an impact",
+    "title0": "As DAO",
+    "text0": "Get early access on products, vip lounge, newsletters, early opportunities, discounts, and membership rewards",
+    "title1": "As Creator",
+    "text1": "List your NFTs as little as $1 for listing/storage fee and 2.5% transaction fee for every purchase",
+    "title2": "As Collector",
+    "text2": "Collect from different marketplaces and manage collectibles via Xircus Mobile and Xircus TV apps",
+    "title3": "As Web3 App Owner",
+    "text3": "Deploy your NFT marketplace, customize your fees and themes, create staking opportunities for your customers",
+    "title4": "As Graph Provider",
+    "text4": "Earn from deploying APIs to cached data for marketplaces",
+    "title5": "As Ambassador",
+    "text5": "Earn from helping creators list their creation",
+    "title6": "As Developer",
+    "text6": "Earn from building templates, extensions and support"    
+  },
+  "blockchains": {
+    "title": "Multiple Blockchain Support",
+    "subtitle": "Xircus supports multi-chain deployment for multiple blockchain selection",
+    "subtitle1": "The smart contracts can be deployed to any EVM compatible chains"
+  },
+  "token": {
+    "title1": "A utility token that",
+    "title2": "progresses with your journey"
+  },
+  "calculator": {
+    "title": "Income Calculator",
+    "subtitle": "Example using 1,000,000 NFT items listed, paid with USDC",
+    "text": "What is your marketplace/app listing fee?",
+    "marketplace": "dApp Owner (You)",
+    "provider": "Data Provider",
+    "ambassador": "Ambassador",
+    "platform": "Platform",
+    "info0": "Get started for FREE",
+    "info1": "No hidden costs",
+    "info2": "Starting at $1 listing fee",
+    "info3": "Custom market fees starting at 1%",
+    "info4": "Not taking royalty fees"
+  }, 
+  "footer": {
+    "name": "All Rights Reserved 2023 | Xircus Pte Ltd",
+    "learn": "Learn",
+    "build": "Build",
+    "explore": "Explore",
+    "participate": "Participate",
+    "resources": "Resources",
+    "introduction": "Introduction",
+    "features": "Features",
+    "staking": "Staking",
+    "xw3": "Get XW3",
+    "faq": "FAQ",
+    "sdks": "SDKs",
+    "graph": "Graph API",
+    "contracts": "Contracts",
+    "skins": "Skin Templates",
+    "blocks": "Block Editor",
+    "devref": "Developer Reference",
+    "guides": "Guides",
+    "tokens": "Tokenomics",
+    "marketplaces": "NFT Marketplaces",
+    "defis": "DeFi Apps",
+    "launchpads": "Token Launchpads",
+    "predictions": "Prediction Markets",
+    "wallets": "Wallets",
+    "daos": "DAOs",
+    "blog": "Blog",
+    "community": "Community",
+    "contributors": "Contributors",
+    "events": "Events",
+    "hackatons": "Hackatons",
+    "about": "About",
+    "pressKit": "Press Kit",
+    "design": "Design",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy",
+    "contactUs": "Contact Us"
+  }   
 }
