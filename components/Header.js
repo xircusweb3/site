@@ -1,15 +1,17 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import {
   Box, Heading, Stack, Container,
   HStack, Image, Spacer, Button, Select, Drawer, DrawerBody,
   DrawerOverlay, DrawerCloseButton, DrawerContent, IconButton,
-  useDisclosure
+  useDisclosure,
+  Tooltip,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { ChevronDownIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Router, { useRouter } from 'next/router'
 import { useTranslations } from 'next-intl'
-import { motion } from 'framer-motion'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+import { TbArrowNarrowUp, TbArrowUp } from 'react-icons/tb'
 
 const changeLocale = async ({ target: { value } }) => {
   await Router.push('/', '/', { locale: value })
@@ -67,9 +69,9 @@ const ChangeLocale = (props) => (
 
 const MobileDrawer = ({ children, isOpen, onClose, ...rest }) => (
   <Drawer isOpen={isOpen} onClose={onClose} {...rest}>
-    <DrawerOverlay />
-    <DrawerContent bg="gray.900">
-      <DrawerBody >{children}</DrawerBody>
+    <DrawerOverlay bg="transparent" />
+    <DrawerContent bg="transparent" backdropFilter="blur(20px)">
+      <DrawerBody>{children}</DrawerBody>
       <DrawerCloseButton />
     </DrawerContent>
   </Drawer>
@@ -135,12 +137,22 @@ const headerLinks = [
 export const Header = () => {
   const t = useTranslations('header')
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { scrollY } = useScroll()
+  const [showUp, setShowUp] = useState(false)
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 1000) {
+      setShowUp(true)
+    } else {
+      setShowUp(false)
+    }
+  })
 
   return (
     <Fragment>
       <MobileDrawer isOpen={isOpen} onClose={onClose} zIndex="9999999 !important">
       <Stack align="center" justify="center" py={20}>
-        <Stack spacing={6}>
+        <Stack spacing={6} align="stretch" justify="stretch">
           {
             headerLinks.map((link, linkKey) =>
               <HeaderLink key={linkKey} letterSpacing={3} text={t(link.key)} href={link.href} w="full" />
@@ -152,7 +164,7 @@ export const Header = () => {
         </Box>
       </Stack>
       </MobileDrawer>      
-      <Box zIndex={isOpen ? 1 : 9999999} pos="fixed" w="100%">
+      <Box zIndex={isOpen ? 1 : 9999999} pos="fixed" w="100%" backdropFilter="blur(20px)">
         <Container maxW="container.xl" py={8}>
           <HStack>
             <Link href="/">
@@ -165,7 +177,12 @@ export const Header = () => {
             <HStack spacing={4} mr="40px !important" display={{ base: 'none', md: 'block' }}>
               {
                 headerLinks.map((link, linkKey) =>
-                  <HeaderLink key={linkKey} external={link?.external || false} text={t(link.key)} href={link.href}  />
+                  <HeaderLink 
+                    key={linkKey} 
+                    external={link?.external || false} 
+                    text={t(link.key)} 
+                    href={link.href}
+                    />
                 )
               }
             </HStack>
@@ -181,6 +198,15 @@ export const Header = () => {
         </Container>
       </Box>
       <Box h="96px" />
+      {
+        showUp && (
+          <Box pos="fixed" bottom={10} right={10}>
+            <Tooltip label="Back To Top">
+              <IconButton icon={<TbArrowNarrowUp />} as="a" href="#" size="lg" rounded="full" backdropFilter="blur(20px)" />
+            </Tooltip>
+          </Box>
+        )
+      }
     </Fragment>
   )
 }

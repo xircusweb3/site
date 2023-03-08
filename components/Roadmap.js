@@ -1,37 +1,39 @@
-import { Box, Container, Grid, Heading, HStack, IconButton, List, ListItem, Text } from "@chakra-ui/react"
+import { Box, Container, Grid, Heading, Highlight, HStack, IconButton, List, ListItem, Text } from "@chakra-ui/react"
 import { useTranslations } from "next-intl"
 import { useMemo, useState } from "react"
 import { TbChevronDown } from "react-icons/tb"
 import { GradientHeading } from "./Gradient"
 
 const q1 = `
-Platform Xircus V5 demo ✔️
-Litepaper release ✔️
-Product validation stage
-Closed Alpha testing 
-Onboarding Discord and Telegram team
-Start Seed Round
-Start listing/onboarding token community/projects in Xircus currency manager 
-Xircus website UI/UX design + content improvement 
-Developers documentation release
-Deck release
-Fiat payment support (fiat currency to $XW3 processing in the background)
-Xircus SDK release
-Xircus V5 platform beta launch
-Xircus Developers Community launch
-Commencing partnerships with blockchain networks
-Kickoff series of Xircus Hackathons in partnership with Draper Startup House
-Announcing first partners and advisors
-Expanding Quality assurance/User experience team
-Private/strategic sale rounds
-Beta testing
-Representing Xircus at Web3 and Blockchain conferences
-Finalization of corporate structure Xircus Foundation
+>Platform Xircus V5 demo
+>Litepaper Release
+>Product Validation Stage
+>Closed Alpha Testing 
+>Onboarding Discord and Telegram Team
+>Start Seed Round
+>Xircus website UI/UX design + Content Improvement 
+>Developer Documentation Release
+>Deck release
+>Fiat-to-crypto conversion integration with payment aggregators
+>Xircus SDK Release
+>Xircus V5 Platform Beta Launch
+>Commencing Partnerships with Blockchain Networks
+=Announcing First Partners and Advisors
+=Xircus Developers Community launch
+=Listing token community and projects to promote currencies
+=Kickoff Series of Hackathons in Partnership with Draper Startup House
+=Expanding Quality Assurance Team
+Private and Strategic Sale Rounds
+Beta Testing
+Representing Xircus at Web3 and Blockchain Conferences
+Finalization of Corporate Structure for Xircus Foundation
 Whitelisting campaign $XW3
-Xircus Studio first major UI/UX design improvements release
-Start XircusSkins release
-Marketing & PR campaigns to increase awareness of IDO 
-Promotional airdrop campaign increasing $XW3 token/IDO popularity and Web3 dApp deployer
+Xircus Studio First Major UI/UX Design Improvement Release
+Start XircusPunks Release
+Start XircusSkins Release
+Marketing & PR Campaigns To Increase IDO  Awareness
+Promotional Airdrop Campaign for $XW3
+Promotional for Web3 App Deployer
 `
 
 const q2 = `
@@ -87,9 +89,21 @@ const Timeline = ({ title, items, side = 'left' }) => {
 
   const toggleShow = () => setShow(!show)
 
+  const renderItem = (item) => {
+    if (item.startsWith('>')) {
+      return <Box fontWeight="bold" color="green.500">{item.replace('>', '✅ ')}</Box> 
+    }
+
+    if (item.startsWith('=')) {
+      return <Box fontWeight="bold" color="green.500">{item.replace('=', '🚧 ')}</Box> 
+    }
+
+    return <Box fontWeight="bold" color="gray.500" pl={6}>{item}</Box>
+  }
+
   const renderList = useMemo(() => {
     if (show) {
-      return items.map((item, itemKey) => <ListItem key={itemKey}>{item}</ListItem>)
+      return items.map((item, itemKey) => <ListItem key={itemKey}>{renderItem(item)}</ListItem>)
     }
   }, [items, show])
 
@@ -103,8 +117,8 @@ const Timeline = ({ title, items, side = 'left' }) => {
       <Box display={{ base: 'none', md: 'block' }}>
       {
         side == 'left'
-        ? <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" right="2px" />
-        : <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" left="-15px" />
+        ? <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" right="-10px" />
+        : <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" left="-5px" />
       }
       </Box>
       <HStack mb={6} justify="space-between">
