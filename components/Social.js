@@ -72,7 +72,7 @@ export const Social = () => {
           </Box>
           <Box rounded="lg" overflow="hidden">
             <YouTube
-              videoId="isVTDX7cmvM"
+              videoId="IWtUDb5jagc"
               opts={videoOpts}
               onReady={handleOnReady}
             />
