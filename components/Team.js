@@ -72,7 +72,7 @@ export const Team = () => {
               avatar={`${TEAM_ASSETS}john.png`} 
               name="John Etetim Udoh" 
               role="Community Lead"
-              href="https://www.linkedin.com/in/shubham-singh-3013001a5/"
+              href="https://www.linkedin.com/in/john-udoh/"
               />
           </Grid>
           <Heading mb={6} size="lg">Advisors</Heading>          
