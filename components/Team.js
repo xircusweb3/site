@@ -5,15 +5,27 @@ import {
 import { useTranslations } from 'next-intl'
 import { Slide, Fade, Flip } from 'react-awesome-reveal'
 
-const User = ({ avatar, name, role, href = '/' }) => (
+const Founder = ({ avatar, name, role, href = '/' }) => (
   <Fade top cascade>
-    <Stack align="center" gap={4}  transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
+    <Stack align="center" gap={2}  transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
       <Avatar border={0} boxSize="160px" src={avatar} />
       <Heading size="lg">{name}</Heading>
       <Heading size="md" color="gray.500">{role}</Heading>
     </Stack>
   </Fade>
 )
+
+const Member = ({ avatar, name, role, desc, href = '/' }) => (
+  <Fade top cascade>
+    <Stack align="center" transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
+      <Avatar border={0} boxSize="100px" src={avatar} />
+      <Heading size="md">{name}</Heading>
+      {role && <Heading size="sm" color="gray.500">{role}</Heading> }
+      {desc && <Text fontSize="sm" color="gray.500">{desc}</Text> }
+    </Stack>
+  </Fade>
+)
+
 
 const TEAM_ASSETS = '../assets/team/'
 
@@ -22,26 +34,74 @@ export const Team = () => {
     <Box py={40} id="team">
       <Container maxW="container.lg" centerContent textAlign="center">
         <Box mb={10}>
-          <Stack direction={{ base: 'column', md: 'row' }} justify="center" align="center" spacing={12}>
-            <User 
-              avatar={`${TEAM_ASSETS}falco.png`} 
-              name="Falco Pangkey" 
-              role="CEO"
-              href="https://www.linkedin.com/in/falcopangkey/"
+          <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} mb={16}>
+              <Founder 
+                avatar={`${TEAM_ASSETS}falco.png`} 
+                name="Falco Pangkey" 
+                role="CEO"
+                href="https://www.linkedin.com/in/falcopangkey/"
+                />
+              <Founder 
+                avatar={`${TEAM_ASSETS}mikey.png`}
+                name="Michael Molina" 
+                role="CTO"
+                href="https://www.linkedin.com/in/drybfounder/"
+                />
+              <Founder 
+                avatar={`${TEAM_ASSETS}erik.png`} 
+                name="Erik de Groot" 
+                role="COO"
+                href="http://www.linkedin.com/in/erikmdegroot"
+                />            
+          </Grid>
+          <Heading mb={6} size="lg">Team Leaders</Heading>          
+          <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} mb={16}>
+            <Member 
+              avatar={`${TEAM_ASSETS}thea.png`} 
+              name="Thea WR" 
+              role="Operations Lead"
+              href="https://www.linkedin.com/in/theawr"
               />
-            <User 
-              avatar={`${TEAM_ASSETS}mikey.png`}
-              name="Michael Molina" 
-              role="CTO"
-              href="https://www.linkedin.com/in/drybfounder/"
+            <Member 
+              avatar={`${TEAM_ASSETS}shubham.png`}
+              name="Shubham Singh" 
+              role="QA/Dev Lead"
+              href="https://www.linkedin.com/in/shubham-singh-3013001a5/"
               />
-            <User 
-              avatar={`${TEAM_ASSETS}erik.png`} 
-              name="Erik de Groot" 
-              role="COO"
-              href="http://www.linkedin.com/in/erikmdegroot"
+            <Member 
+              avatar={`${TEAM_ASSETS}john.png`} 
+              name="John Etetim Udoh" 
+              role="Community Lead"
+              href="https://www.linkedin.com/in/shubham-singh-3013001a5/"
               />
-          </Stack>
+          </Grid>
+          <Heading mb={6} size="lg">Advisors</Heading>          
+          <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }}>
+            <Member 
+              avatar={`${TEAM_ASSETS}hung.png`} 
+              name="Jason Hung" 
+              desc="#1 ICO Advisor China Markets"
+              href="https://tw.linkedin.com/in/jasonhung-earth"
+              />
+            <Member 
+              avatar={`${TEAM_ASSETS}scarffe.png`}
+              name="Ian Scarffe" 
+              desc="#1 Ranked ICO Advisor"
+              href="https://uk.linkedin.com/in/ianscarffe"
+              />
+            <Member 
+              avatar={`${TEAM_ASSETS}khan.png`} 
+              name="Hamza Khan" 
+              desc="Top Ranked ICO Advisor"
+              href="https://www.linkedin.com/in/hamzaxkh/"
+              />
+            <Member 
+              avatar={`${TEAM_ASSETS}irfan.png`} 
+              name="Muhammad Irfan" 
+              desc="Adviced 100+ Blockchain projects"
+              href="https://www.linkedin.com/in/chmirfan/"
+              />              
+          </Grid>          
         </Box>
       </Container>
     </Box>

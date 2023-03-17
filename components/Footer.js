@@ -196,7 +196,7 @@ const participateLinks = [
 const resourceLinks = [
   {
     key: 'deck',
-    path: 'https://docsend.com/view/gfy4d5uiqkqkie7w',
+    path: 'https://docsend.com/view/bdb8pjmsg2e9hfhm',
     target: '_blank'
   },  
   {

@@ -52,7 +52,7 @@ const ChangeLocale = (props) => (
     onChange={changeLocale}
     {...props}>
     <option value="en">English</option>
-
+    <option value="zh">中文</option>
   </Select>
 )
 
@@ -124,7 +124,7 @@ const headerLinks = [
   },
   {
     key: 'deck',
-    href: 'https://docsend.com/view/gfy4d5uiqkqkie7w',
+    href: 'https://docsend.com/view/bdb8pjmsg2e9hfhm',
     external: true
   },
   {
