@@ -1,53 +1,51 @@
-import { Box, Stack, HStack, Wrap, Image, Container, Heading } from '@chakra-ui/react'
+import { Box, Wrap, Image, Center, Tooltip } from '@chakra-ui/react'
+import { GradientHeading } from './Gradient'
 
 const links = [
   {
-    name: 'Business Insider',
-    image: 'business-insider-gray.png',
-    url: 'https://markets.businessinsider.com/news/stocks/xircus-creates-the-first-multi-chain-dao-with-marketplaces-for-customized-tokenized-assets-to-help-creative-professionals-sell-ntfs-1030669598'
+    name: 'Draper Startup House',
+    image: 'draper.png',
+    url: 'https://xircus.medium.com/xircus-x-draper-startup-house-web3-hackathon-and-collaboration-initiative-b637c236a91b'
   },
   {
-    name: 'Yahoo Finance',
-    image: 'yahoo-finance-gray.png',
-    url: 'https://finance.yahoo.com/news/xircus-created-worlds-first-multi-131500132.html'
+    name: 'IoTeX Blockchain Ecosystem',
+    image: 'iotex.png',
+    url: 'https://twitter.com/Raullen/status/1631362440855445504'
   },
   {
-    name: 'MarketWatch',
-    image: 'market-watch-gray.png',
-    url: 'https://www.marketwatch.com/press-release/xircus-creates-the-first-multi-chain-gamified-dao-nft-marketplace-platform-2021-07-22'
+    name: 'Aurora EVM on Near Blockchain',
+    image: 'aurora.png',
+    url: 'https://xircus.medium.com/xircus-web3-protocol-joins-forces-with-aurora-unlocking-new-possibilities-for-developers-bc725ea358ef'
   },
   {
-    name: 'AMBCrypto',
-    image: 'ambcrypto-gray.png',
-    url: 'https://ambcrypto.com/xircus-challenging-the-conventional-ideas-of-creating-and-selling-nfts/'
+    name: 'MagikLabs Payment Aggregator',
+    image: 'magik-labs.png',
+    url: 'https://xircus.medium.com/xircus-x-magik-labs-breaking-down-the-barriers-bde3d5d612c6'
   },
   {
-    name: 'NewsBTC',
-    image: 'newsbtc-gray.png',
-    url: 'https://www.newsbtc.com/press-releases/xircus-offers-advanced-solutions-to-create-nft-marketplace-grabs-attention-of-leading-institutional-investors/'
+    name: 'Web3 Arabs Education Platform',
+    image: 'web3-arabs.png',
+    url: 'https://xircus.medium.com/xircus-x-web3-arabs-when-theory-becomes-a-working-dapp-2ddb80dcd52f'
   },
-  {
-    name: 'Benzinga',
-    image: 'bezinga-gray.png',
-    url: 'https://www.benzinga.com/pressreleases/21/07/22060346/xircus-created-the-worlds-first-multi-chain-gamified-dao-platform-to-launch-custom-nft-marketplaces'
-  },
-  {
-    name: 'Digital Journal',
-    image: 'digital-journal-gray.png',
-    url: 'https://www.digitaljournal.com/pr/xircus-created-the-worlds-first-multi-chain-gamified-dao-platform-to-launch-custom-nft-marketplaces'
-  }
 ]
 
 const PressLink = ({ url, name, image }) => (
   <Box as="a" href={url} target="_blank">
-    <Image h="24px" src={`../assets/images/partners/${image}`} alt={name} />
+    <Tooltip label={name}>
+      <Image h="80px" src={`../assets/partners/${image}`} alt={name} transition="all 400ms ease" _hover={{ opacity: 0.8, transform: 'scale(1.1)' }} />
+    </Tooltip>
   </Box>
 )
 
 export const Partners = () => (
-  <Wrap align="center" justify="center" spacing={{ base: 8, md: 16 }} px={{ base: 4, md: 0 }}>
-    {
-      links.map((link, linkKey) => <PressLink {...link} key={linkKey} />)
-    }
-  </Wrap>
+  <Box py={16}>
+    <Center pb={8}>
+      <GradientHeading>Our Partners</GradientHeading>
+    </Center>
+    <Wrap align="center" justify="center" spacing={{ base: 8, md: 16 }} px={{ base: 4, md: 0 }} >
+      {
+        links.map((link, linkKey) => <PressLink {...link} key={linkKey} />)
+      }
+    </Wrap>
+  </Box>
 )

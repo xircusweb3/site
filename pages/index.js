@@ -5,6 +5,7 @@ import { Feats } from "../components/Feats"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Hero } from "../components/Hero"
+import { Press } from "../components/Press"
 import { Partners } from "../components/Partners"
 import { Products } from "../components/Products"
 import { Reach } from "../components/Reach"
@@ -56,20 +57,20 @@ export default function Home() {
       />       
       <Header />
       <Hero />
-      <Partners />
+      <Press />
       <Solutions />
       <Skins />
       <Blockchains />
       <Feats />
       <Reach />
       <Social />
+      <Partners />
       <Products />
       <Earn />
       <Token />
       <Calculator />
       <Roadmap />
       <Team />
-
       <Footer />
     </>
   )

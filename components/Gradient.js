@@ -10,4 +10,4 @@ const gradientTextStyle = {
   bgClip: 'text',
 }
 
-export const GradientHeading = props => <Heading {...props} {...gradientTextStyle} />
+export const GradientHeading = props => <Heading {...gradientTextStyle} {...props} />
