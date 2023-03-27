@@ -73,7 +73,6 @@ const items = [
     title: 'HECO',
     disabled: true
   },
-
   {
     image: 'fuse-white.png',
     title: 'Fuse',

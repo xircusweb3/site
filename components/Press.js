@@ -2,6 +2,11 @@ import { Box, Stack, HStack, Wrap, Image, Container, Heading } from '@chakra-ui/
 
 const links = [
   {
+    name: 'Cointelegraph',
+    image: 'cointelegraph.png',
+    url: 'https://cointelegraph.com/press-releases/xircus-web3-protocol-positioned-to-become-go-to-platform-for-web3/amp'
+  },
+  {
     name: 'Business Insider',
     image: 'business-insider-gray.png',
     url: 'https://markets.businessinsider.com/news/stocks/xircus-creates-the-first-multi-chain-dao-with-marketplaces-for-customized-tokenized-assets-to-help-creative-professionals-sell-ntfs-1030669598'
@@ -35,12 +40,12 @@ const links = [
     name: 'Digital Journal',
     image: 'digital-journal-gray.png',
     url: 'https://www.digitaljournal.com/pr/xircus-created-the-worlds-first-multi-chain-gamified-dao-platform-to-launch-custom-nft-marketplaces'
-  }
+  },
 ]
 
 const PressLink = ({ url, name, image }) => (
   <Box as="a" href={url} target="_blank">
-    <Image h="24px" src={`../assets/images/partners/${image}`} alt={name} />
+    <Image h="30px" src={`../assets/images/partners/${image}`} alt={name} />
   </Box>
 )
 
