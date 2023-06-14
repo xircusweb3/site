@@ -74,7 +74,13 @@ export const Team = () => {
                 name="Diego Layola" 
                 role="LatAm Community Lead"
                 href="https://www.linkedin.com/in/#"
-                />                                
+                />
+              <Member 
+                avatar={`${TEAM_ASSETS}kangnian.png`} 
+                name="Kangnian" 
+                role="China Community Lead"
+                href="https://www.linkedin.com/in/#"
+                />                
             </HStack>
           </Box>
           <Heading mb={6} size="lg">Advisors</Heading>          
