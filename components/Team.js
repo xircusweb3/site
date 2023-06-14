@@ -56,7 +56,7 @@ export const Team = () => {
           </Grid>
           <Box py={24}>
             <Heading mb={6} size="lg">Team Leaders</Heading>          
-            <HStack align="center" justify="center">
+            <Stack direction={{ base: 'column', md: 'row' }} align="center" justify="center">
               <Member 
                 avatar={`${TEAM_ASSETS}thea.png`} 
                 name="Thea WR" 
@@ -81,7 +81,7 @@ export const Team = () => {
                 role="China Community Lead"
                 href="https://www.linkedin.com/in/#"
                 />                
-            </HStack>
+            </Stack>
           </Box>
           <Heading mb={6} size="lg">Advisors</Heading>          
           <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }}>
