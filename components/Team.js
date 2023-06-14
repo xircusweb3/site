@@ -63,6 +63,12 @@ export const Team = () => {
                 role="Operations Lead"
                 href="https://www.linkedin.com/in/theawr"
                 />
+              <Member 
+                avatar={`${TEAM_ASSETS}diego.png`} 
+                name="Diego" 
+                role="LATAM Lead/Advisor"
+                href="https://www.linkedin.com/in/#"
+                />                
             </HStack>
           </Box>
           <Heading mb={6} size="lg">Advisors</Heading>          
@@ -90,7 +96,7 @@ export const Team = () => {
               name="Muhammad Irfan" 
               desc="Adviced 100+ Blockchain projects"
               href="https://www.linkedin.com/in/chmirfan/"
-              />              
+              />                            
           </Grid>          
         </Box>
       </Container>
