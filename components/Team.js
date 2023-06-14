@@ -64,11 +64,17 @@ export const Team = () => {
                 href="https://www.linkedin.com/in/theawr"
                 />
               <Member 
-                avatar={`${TEAM_ASSETS}diego.png`} 
-                name="Diego" 
-                role="LATAM Lead/Advisor"
+                avatar={`${TEAM_ASSETS}juan.png`} 
+                name="Juan Ochoa" 
+                role="LatAm Lead"
                 href="https://www.linkedin.com/in/#"
                 />                
+              <Member 
+                avatar={`${TEAM_ASSETS}diego.png`} 
+                name="Diego Layola" 
+                role="LatAm Community Lead"
+                href="https://www.linkedin.com/in/#"
+                />                                
             </HStack>
           </Box>
           <Heading mb={6} size="lg">Advisors</Heading>          
