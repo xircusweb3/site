@@ -54,27 +54,17 @@ export const Team = () => {
                 href="http://www.linkedin.com/in/erikmdegroot"
                 />            
           </Grid>
-          <Heading mb={6} size="lg">Team Leaders</Heading>          
-          <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} mb={16}>
-            <Member 
-              avatar={`${TEAM_ASSETS}thea.png`} 
-              name="Thea WR" 
-              role="Operations Lead"
-              href="https://www.linkedin.com/in/theawr"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}shubham.png`}
-              name="Shubham Singh" 
-              role="QA/Dev Lead"
-              href="https://www.linkedin.com/in/shubham-singh-3013001a5/"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}john.png`} 
-              name="John Etetim Udoh" 
-              role="Community Lead"
-              href="https://www.linkedin.com/in/john-udoh/"
-              />
-          </Grid>
+          <Box py={24}>
+            <Heading mb={6} size="lg">Team Leaders</Heading>          
+            <HStack align="center" justify="center">
+              <Member 
+                avatar={`${TEAM_ASSETS}thea.png`} 
+                name="Thea WR" 
+                role="Operations Lead"
+                href="https://www.linkedin.com/in/theawr"
+                />
+            </HStack>
+          </Box>
           <Heading mb={6} size="lg">Advisors</Heading>          
           <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }}>
             <Member 
@@ -111,3 +101,16 @@ export const Team = () => {
 // <User avatar={`${TEAM_ASSETS}utsav.png`} name="Utsav Kumar" role="Content Lead" />
 // <User avatar={`${TEAM_ASSETS}shafeeq.png`} name="Shafeeq Qureshi" role="Advisor (Middle East)" />
 // <User avatar={`${TEAM_ASSETS}jen.png`} name="Jen Buakaew" role="Advisor (Asia)" />
+
+{/* <Member 
+avatar={`${TEAM_ASSETS}shubham.png`}
+name="Shubham Singh" 
+role="QA/Dev Lead"
+href="https://www.linkedin.com/in/shubham-singh-3013001a5/"
+/>
+<Member 
+avatar={`${TEAM_ASSETS}john.png`} 
+name="John Etetim Udoh" 
+role="Community Lead"
+href="https://www.linkedin.com/in/john-udoh/"
+/> */}
