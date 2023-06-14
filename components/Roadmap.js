@@ -6,82 +6,97 @@ import { GradientHeading } from "./Gradient"
 
 const q1 = `
 >Platform Xircus V5 demo
->Litepaper Release
->Product Validation Stage
->Closed Alpha Testing 
->Onboarding Discord and Telegram Team
->Start Seed Round
->Xircus website UI/UX design + Content Improvement 
->Developer Documentation Release
->Deck release
->Fiat-to-crypto conversion integration with payment aggregators
->Xircus SDK Release
->Xircus V5 Platform Beta Launch
->Commencing Partnerships with Blockchain Networks
-=Announcing First Partners and Advisors
-=Xircus Developers Community launch
-=Listing token community and projects to promote currencies
-=Kickoff Series of Hackathons in Partnership with Draper Startup House
-=Expanding Quality Assurance Team
-Private and Strategic Sale Rounds
-Beta Testing
-Representing Xircus at Web3 and Blockchain Conferences
-Finalization of Corporate Structure for Xircus Foundation
-Whitelisting campaign $XW3
-Xircus Studio First Major UI/UX Design Improvement Release
-Start XircusPunks Release
-Start XircusSkins Release
-Marketing & PR Campaigns To Increase IDO  Awareness
-Promotional Airdrop Campaign for $XW3
-Promotional for Web3 App Deployer
+>Litepaper release
+>Announcing Xircus Hackathons in partnership with Draper Startup House
+>Announcing first partners and advisors
+>Fiat payment support (fiat currency to $XW3 processing in the background)
+>Start XircusSkins release
+>Commencing partnerships with blockchain networks
+>Commencing the Seed round
+>Developers documentation release
+>Start of Product validation stage
+>Xircus website UI/UX design + content improvement 
+>Expanding Quality assurance/User experience team
+>Kickoff 2-days hackathon in Manila in partnership with Draper Startup House
+>First version deck release
+>Xircus SDK release
+>Closed Alpha testing 
+>Exploring the Shari'ah compliance framework
 `
 
 const q2 = `
+>Xircus Studio V5 Release
+>Prepare Scaling Xircus Hackathons in Asia
+>Prepare scaling Xircus Hackathons in Middle-East
+>Initial Xircus Designer release https://designer.xircus.app
+>Deployment of Sandbox API for test web3 apps https://sandbox.xircus.app 
+>Publishing of Xircus Open Source Smart Contracts for Community Deployment
+>Xircus Designer Skin Presets
+>Launch ofZealy token airdrop campaign
+>Establishing LATAM team and community 
+>Exploring and preparing contract generation using AI
+>Xircus Studio first major UI/UX design improvements release
+=Updated Deck release
+=NFT General Marketplace UI Blocks
+=NFT Music Marketplace UI Blocks
+=NFT Adult/Fan Marketplace UI Blocks
+=NFT Real Estate Marketplace UI Blocks
+=NFT Ticket Marketplace UI Blocks
+=NFT Meme Generative Marketplace UI Blocks
+=DeFi Swap/Liquidity UI Blocks
+Onboarding Discord and Telegram Team
 Expanding Marketing team
 Establishing Business development team
-Exploring ISO 20022 certification
-Exploring the Shari'ah compliance framework
+Start listing/onboarding token community/projects in Xircus currency manation
+Marketing & PR campaigns to scale ‘creators’ user base 
+Xircus Developers Community launch 
+Finalization of corporate structure Xircus Foundation
+`
+
+const q3 = `
+Scaling stage
 Xircus Academy Launch
-Marketing & PR campaigns to scale ‘creators’ user base 
-Scaling Xircus Hackathons to multiple Draper Startup House locations in Asia
-Scaling Xircus Hackathons with different partners in Middle-East/North Africa
-First release Mobile app iOS & Android
+Marketing & PR campaigns to increase awareness of IDO 
+Promotional airdrop campaign increasing $XW3 token/IDO popularity and Web3 dApp deployer
+Representing Xircus at Web3 and Blockchain conferences
+Whitelisting campaign $XW3
+Token migration and unstaking
+Smart Contract Generation using ChatGPT AI
 IDO
 Coinmarketcap and Coingecko listing
 First Centralized exchange listings
-Start R&D for our own advanced Xircus DEX
 Start XircusPunks NFT marketing campaigns towards the launch
 Xircus Provider Release
 Xircus Launchpad Release
 Xircus Aggregator Release
 XircusPunks NFTs sale
 DAO Governance and community proposal release
-Establish partners for “off-chain” solutions Xircus Real Estate proposition 
-`
-
-const q3 = `
-Scaling Xircus Hackathons to multiple Draper Startup House locations in Europe
-Start of marketing campaigns release of “provider, launchpad and aggregator” 
-Scaling Xircus Hackathons with different partners in US
+Exploring ISO 20022 certification
+Start R&D for our own advanced Xircus DEX
+Establish partners for “off-chain” solutions Xircus Real Estate proposition 
+Scaling Xircus Hackathons to locations in Europe
+Start of marketing campaigns release of “provider, launchpad and aggregator” 
+Scaling Xircus Hackathons to multiple Draper Startup House locations in LATAM
 Hosting Xircus Hackathons at Web3/Blockchain events
 Start R&D XircusNodes
 Listing on multiple centralized exchanges
-Own DEX launch
-Release of pre-built deployable mobile app for Ringmasters and devs iOS and Android
+First release Mobile app iOS & Android
 Start marketing campaigns release of “pre-built deployable mobile app for Ringmasters”
 Launch Xircus Real Estate proposition
 `
 
 const q4 = `
-Scaling Xircus Hackathons to multiple Draper Startup House locations in LATAM
-Scaling Xircus Hackathons with partners in specific industries 
-Onboarding industry specific advisors 
+Release of pre-built deployable mobile app for Ringmasters and devs iOS and Android
+Scaling Xircus Hackathons with partners in specific industries 
+Scaling Xircus Hackathons with different partners in US
+Onboarding industry specific advisors 
 Hosting Xircus Hackathons at Web3/Blockchain events
 Giveaway Xircus Graph Provider to Individual GraphQL Providers
 Transition to Xircus Node Service
-Tier-1 centralized exchange listings 
+Tier-1 centralized exchange listings 
 Xircus tv app for Apple tv & Android tv
-Start R&D our own Blockchain  
+Start R&D our own Blockchain
+Own DEX launch  
 `
 
 const Timeline = ({ title, items, side = 'left' }) => {
@@ -117,8 +132,8 @@ const Timeline = ({ title, items, side = 'left' }) => {
       <Box display={{ base: 'none', md: 'block' }}>
       {
         side == 'left'
-        ? <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" right="-10px" />
-        : <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" left="-5px" />
+        ? <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" right="-36px" />
+        : <Box w="14px" h="14px" bgGradient="linear(to-b, #FA1A85, #FF8D28)" rounded="full" pos="absolute" left="22px" />
       }
       </Box>
       <HStack mb={6} justify="space-between">
