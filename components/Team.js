@@ -70,7 +70,7 @@ export const Team = () => {
                 href="https://www.linkedin.com/in/#"
                 />                
               <Member 
-                avatar={`${TEAM_ASSETS}diego.png`} 
+                avatar={`${TEAM_ASSETS}diegos.png`} 
                 name="Diego Layola" 
                 role="LatAm Community Lead"
                 href="https://www.linkedin.com/in/#"
