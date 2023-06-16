@@ -12,6 +12,16 @@
     "investors": "INVESTORS",
     "getStarted": "GET STARTED"
   },
+  "skin": {
+    "title": "Choose Your Favorite Skin",
+    "subtitle": "Tailored fit to the niche and functionality"
+  },
+  "ai": {
+    "heading": "Even Better with AI",
+    "title": "dApps and AI Unite",
+    "content": "Evolving at the intersection of AI and blockchain, Xircus Web3 Protocol unlocks limitless possibilities in dApp and smart contract development. Harnessing AI, we streamline complex processes from configuration to smart contract creation. With the Xircus community, we're shaping an endless AI-driven future for decentralized applications",
+    "button": "Try it out!"
+  },
   "hero": {
     "title1": "Create, Deploy, and",
     "title2": "Scale",

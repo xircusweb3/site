@@ -16,6 +16,7 @@ import { Solutions } from "../components/Solutions"
 import { Team } from "../components/Team"
 import { Token } from "../components/Token"
 import Script from 'next/script'
+import { ContractAI } from "../components/ContractAI"
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
       <Hero />
       <Press />
       <Solutions />
+      <ContractAI />
       <Skins />
       <Blockchains />
       <Feats />

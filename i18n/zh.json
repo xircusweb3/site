@@ -12,6 +12,16 @@
     "investors": "投资者”",
     "getStarted": "开始启动"
   },
+  "skin": {
+    "title": "选择你最喜欢的皮肤",
+    "subtitle": "量身定制适合利基和功能"
+  },  
+  "ai": {
+    "heading": "有了 AI 会更好",
+    "title": "dApps 和 AI 联合",
+    "content": "Xircus Web3 协议在 AI 和区块链的交汇处不断发展，为 dApp 和智能合约开发开启了无限可能。利用人工智能，我们简化了从配置到智能合约创建的复杂流程。通过 Xircus 社区，我们正在为去中心化应用塑造一个无限的人工智能驱动的未来",
+    "button": "试试看!"
+  },  
   "hero": {
     "title1": "创建、部署和",
     "title2": "扩展",
