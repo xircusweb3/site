@@ -18,8 +18,8 @@ export const ContractAI = () => {
             <Image src="magic-hat.gif" maxW={50} />
           </Stack>
         </Center>
-        <Stack direction={{ base: 'column', md: 'row' }} gap={8} align="center">
-          <Image src="chatgpt-smart-contract.gif" maxW={500} />
+        <Stack direction={{ base: 'column', md: 'row' }} gap={8} align="center" p={4}>
+          <Image src="chatgpt-smart-contract.gif" maxW={{ base: 340, md: 500 }} />
           <Box>
             <GradientHeading size="lg" mb={6}>{t('title')}</GradientHeading>
             <Box mb={6}>{t('content')}</Box>
