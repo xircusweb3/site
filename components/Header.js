@@ -14,7 +14,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { TbArrowNarrowUp, TbArrowUp } from 'react-icons/tb'
 
 const changeLocale = async ({ target: { value } }) => {
-  await Router.push('/', '/', { locale: value })
+  await Router.push('/', '/', { locale: value || 'en' })
   Router.reload()
 }
 
@@ -53,7 +53,7 @@ const ChangeLocale = (props) => (
     {...props}>
     <option value="en">English</option>
     <option value="zh">中文</option>
-    <option value="ru">Russian</option>    
+    <option value="ru">Russian</option>
   </Select>
 )
 
