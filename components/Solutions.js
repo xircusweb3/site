@@ -1,7 +1,8 @@
 import { Box, Container, Text, Grid, Heading, HStack, Stack } from "@chakra-ui/react"
 import { useTranslations } from "next-intl"
+import Link from "next/link"
 
-const Card = ({ title, desc, label, ...rest }) => (
+const Card = ({ title, subtitle, desc, label, ...rest }) => (
   <Box 
     p={8} 
     w="full"
@@ -19,7 +20,8 @@ const Card = ({ title, desc, label, ...rest }) => (
     <Box borderWidth={4} py={10} mb={8} sx={{ borderImage: "linear-gradient(to bottom, #FF8D28, #F20074) 30%" }}>
       <Heading sx={{ wordSpacing: 300 }}>{title}</Heading>
     </Box>
-    <Box p={4}>
+    <Box p={4} pb={2}>
+      <Heading size="sm" color="gray.500" mb={2} fontWeight="bold" minH={20}>{subtitle}</Heading>
       <Text>{desc}</Text>
       <Text color="#FF8C29">{label}</Text>       
     </Box>
@@ -33,8 +35,15 @@ export const Solutions = () => {
     <Box id="solutions" py={24} mt={{ base: 0, md: 20 }}>
       <Container maxW="container.lg">
         <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 6, md: 12 }} align="center" justify="center">
-          <Card title={t('title1')} desc={t('desc1')} label={t('label1')} as="a" href="#products" />
-          <Card title={t('title2')} desc={t('desc2')} label={t('label2')} as="a" href="https://xircus-developer.gitbook.io/" target="_blank"/>
+          <Link href="/studio-app-deployer">
+            <Card title={t('title1')} subtitle={t('subtitle1')} desc={t('desc1')} label={t('label1')} />
+          </Link>
+          <Link href="/sdks-development-kits">
+            <Card title={t('title2')} subtitle={t('subtitle2')} desc={t('desc2')} label={t('label2')} />
+          </Link>
+          <Link href="/designer-page-builder"> 
+            <Card title={t('title3')} subtitle={t('subtitle3')} desc={t('desc3')} label={t('label3')}/>          
+          </Link>
         </Stack>
       </Container>
     </Box>

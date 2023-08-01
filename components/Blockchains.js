@@ -106,7 +106,8 @@ export const Blockchains = () => {
       <Container maxW="container.lg" centerContent textAlign="center">
         <GradientHeading mb={6}>{t('title')}</GradientHeading>
         <Heading size="md" color="gray.500" mb={2}>{t('subtitle')}</Heading>
-        <Heading size="md" color="gray.500">{t('subtitle1')}</Heading>
+        <Heading size="md" color="gray.500" mb={8}>{t('subtitle1')}</Heading>
+        <Button as="a" variant="outline" rightIcon={<TbExternalLink />} borderColor="gray.100" _dark={{ borderColor: 'gray.900' }} href="https://beta.xircus.app/developers#chains" target="_blank">View All Supported Chains</Button>
         <Wrap justify="center" spacing={6} py={10}>
           {
             items.map((item, itemKey) => (
@@ -124,7 +125,6 @@ export const Blockchains = () => {
             ))
           }
         </Wrap>
-        <Button as="a" variant="link" rightIcon={<TbExternalLink />} href="https://beta.xircus.app/developers#chains" target="_blank">View All Supported Chains</Button>
       </Container>
     </Box>
   )

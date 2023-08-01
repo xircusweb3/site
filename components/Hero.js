@@ -1,5 +1,10 @@
 import { Box, Button, Container, Heading, HStack, Stack, VStack } from "@chakra-ui/react"
+import { OrbitControls, PointMaterial, Points } from "@react-three/drei"
+import { Canvas, useFrame } from "@react-three/fiber"
+import { random } from "maath"
+// import * as random from 'maath/random/dist/maath-random.esm'
 import { useTranslations } from "next-intl"
+import { useRef, useState } from "react"
 
 const headingStyle = {
   size: {
@@ -32,15 +37,32 @@ const labelStyle = {
 }
 
 const btnStyle = {
-  borderWidth: 1,
+  borderWidth: 2,
   size: { base: 'md', md: 'lg' },
   w: { base: 'full', md: 'auto' }
+}
+
+const Stars = (props) => {
+  const ref = useRef()
+  const [sphere] = useState(() => random.inSphere(new Float32Array(2000), { radius: 1.5 }))
+  useFrame((state, delta) => {
+    ref.current.rotation.x -= delta / 10
+    ref.current.rotation.y -= delta / 15
+  })
+
+  return (
+    <group rotation={[0, 0, Math.PI / 4]}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
+        <PointMaterial transparent color="#ff0000" size={0.01} sizeAttenuation={true} depthWrite={false} />
+      </Points>
+    </group>
+  )
 }
 
 export const Hero = () => {
   const t = useTranslations('hero')
   return (
-    <Box id="intro" bgImage="xircus-globe.png" minH={{ base: 400, md: 600 }} bgSize="contain" bgRepeat="no-repeat" bgPos={{  base: 'right -160px top 50%', sm: 'right -50px top 50%', md: 'right center'}}>
+    <Box id="intro" pos="relative" minH={{ base: 400, md: 600 }}>
       <Container maxW="container.xl" py={{ base: 20, md: 40 }}>
         <Box mb={{ base: 6, md: 8 }}>
           <Heading {...headingStyle}><Box {...gradientTextStyle}>{t('title1')}</Box></Heading>
@@ -57,12 +79,12 @@ export const Hero = () => {
               <Heading {...labelStyle}>{t('label2')}</Heading>
             </Box>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 3, md: 4 }}>
-              <Button {...btnStyle} as="a" href="https://xircus-apr-hackathon-manila.devpost.com/" target="_blank">{t('action1')}</Button>         
+              <Button {...btnStyle} as="a" _dark={{ bg: 'transparent', borderColor: 'gray.900', _hover: { borderColor: 'gray.700' } }} href="https://forms.gle/3W8upAmXMmqXK2fCA" target="_blank">{t('action1')}</Button>         
               <Button {...gradientStyle} {...btnStyle} _hover={{ ...gradientStyle }} as="a" href="https://forms.gle/zDQxVPMr1p2LmWwG7" target="_blank">{t('action2')}</Button>                     
             </Stack>
           </Box>
         </HStack>
-      </Container>
+      </Container>        
     </Box>
   )
 }

@@ -243,7 +243,7 @@ export const Footer = () => {
   const t = useTranslations('footer')
   return (
     <Box>
-      <Container maxW="container.xl" px={{ base: 10, md: 0 }} pb={100}>
+      <Container maxW="container.xl" pb={100}>
         <Grid templateColumns={{ base: 'auto', md: 'repeat(5, 1fr)' }} mb={24}>
           <Links title={t('learn')} links={learnLinks} t={t} />
           <Links title={t('build')} links={buildLinks} t={t} />

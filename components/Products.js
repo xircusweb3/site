@@ -23,62 +23,83 @@ const prods = [
   {
     key: 'sdks',
     image: 'governance-product-icon.png',
-    link: 'https://www.npmjs.com/~xircusteam',
+    link: '/sdks-development-kits',
   },
   {
     key: 'contracts',
     image: 'nft-meta-product-icon.png',
-    link: 'https://beta.xircus.app/contracts'
+    link: '/contracts-with-ai'
   },
   {
     key: 'studio',
     image: 'dashboard-product-icon.png',
-    link: 'https://beta.xircus.app'
+    link: '/studio-app-deployer'
   },
   {
     key: 'avatars',
     image: 'punks-product-icon.png',
-    link: 'https://beta.xircus.app/punks'
+    link: '/xps-dao-avatars'
   },
   {
     key: 'skins',
     image: 'skins-product-icon.png',
-    link: 'https://beta.xircus.app/skins'
+    link: '/xst-themeable-skins'
   },
   {
     key: 'blocks',
     image: 'provider-product-icon.png',
-    link: 'https://beta.xircus.app'
+    link: '/designer-page-builder'
   },
   {
     key: 'providers',
     image: 'deployer-product-icon.png',
-    link: 'https://beta.xircus.app/providers'
+    link: '/graphql-data-providers'
   },
   {
     key: 'currencies',
     image: 'token-factory-product-icon.png',
-    link: 'https://beta.xircus.app/currencies'
+    link: '/platform-wide-currencies'
   }  
 ]
 
 const ProductCard = ({ title, href, image }) => (
   <Fade cascade>
-    <VStack
-      as="a"
-      target="_blank"
-      href={href}
-      transition="all 0.25s ease-out"
-      bg="#120F11" 
-      p={6}
-      borderWidth={2}
-      cursor="pointer"
-      borderColor="transparent"
-      borderRadius="lg" textAlign="center"
-      _hover={{ transform: 'scale(1.1)', border: '2px solid orange' }}>
-      <Image src={image} h="75px" w="auto" alt={title} />
-      <Heading size="md">{title}</Heading>
-    </VStack>
+    {
+      href.startsWith('https')
+      ? (
+        <VStack
+          as="a"
+          target="_blank"
+          href={href}
+          transition="all 0.25s ease-out"
+          bg="#120F11" 
+          p={6}
+          borderWidth={2}
+          cursor="pointer"
+          borderColor="transparent"
+          borderRadius="lg" textAlign="center"
+          _hover={{ transform: 'scale(1.1)', border: '2px solid orange' }}>
+          <Image src={image} h="75px" w="auto" alt={title} />
+          <Heading size="md">{title}</Heading>
+        </VStack>        
+      )
+      : (
+        <Link href={href}>
+          <VStack
+            transition="all 0.25s ease-out"
+            bg="#120F11" 
+            p={6}
+            borderWidth={2}
+            cursor="pointer"
+            borderColor="transparent"
+            borderRadius="lg" textAlign="center"
+            _hover={{ transform: 'scale(1.1)', border: '2px solid orange' }}>
+            <Image src={image} h="75px" w="auto" alt={title} />
+            <Heading size="md">{title}</Heading>
+          </VStack>      
+        </Link>
+      )
+    }
   </Fade>
 )
 

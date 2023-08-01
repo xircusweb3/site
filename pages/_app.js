@@ -2,6 +2,7 @@ import { ChakraProvider, extendTheme, localStorageManager } from '@chakra-ui/rea
 import { NextIntlProvider } from 'next-intl';
 import Head from 'next/head'
 import { XIRCUS_TITLE, XIRCUS_DESC, XIRCUS_URL, XIRCUS_IMAGE } from '../constants'
+import Script from 'next/script'
 
 const theme = extendTheme({
   fonts: {
@@ -78,6 +79,41 @@ function MyApp({ Component, pageProps, router }) {
           <meta property="twitter:description" content={XIRCUS_DESC} />
           <meta property="twitter:image" content={XIRCUS_IMAGE} />
         </Head>
+        <Script
+          id="gta"
+          strategy="beforeInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-X95EEBY9YK`}
+          />
+        <Script
+          id="gtag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X95EEBY9YK', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+          />
+        <Script
+          id="hotjar"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:2524876,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+          }}
+          />               
         <Component {...pageProps} />
       </ChakraProvider>
     </NextIntlProvider>

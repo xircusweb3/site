@@ -3,6 +3,11 @@
     "title": "XIRCUS",
     "features": "FEATURES",
     "products": "PRODUCTS",
+    "home": "HOME",
+    "sdks": "SDKS",
+    "studio": "STUDIO",
+    "xw3": "XW3",
+    "designer": "DESIGNER",
     "solutions": "SOLUTIONS",
     "resources": "RESOURCES",
     "earn": "HOW TO EARN",
@@ -29,16 +34,22 @@
     "title4": "Experience",
     "label1": "Deploy your Web3 dApp in minutes",
     "label2": "bundled with awesome features",
-    "action1": "Join Our Hackaton",
+    "action1": "Join The Whitelist",
     "action2": "Get Early Access"
   },
   "solutions": {
     "title1": "No Code",
+    "subtitle1": "for Web3 Enthusiasts, Entrepeneurs and Founders",
     "desc1": "No need to learn web3 architecture, launch with few clicks",
     "label1": "in minutes",
     "title2": "Low Code",
+    "subtitle2": "for Web2 and Web3 Developers",
     "desc2": "Build, integrate, customize and launch web3 dApp",
-    "label2": "in a day"
+    "label2": "in a day",
+    "title3": "UI/UX Design",
+    "subtitle3": "for Web2 and Web3 Designers",
+    "desc3": "Create, customize and monetize web3 app skins",
+    "label3": "in a day"
   },
   "feats": {
     "title1": "Grow as",
