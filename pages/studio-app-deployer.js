@@ -8,6 +8,8 @@ import { TbGlobe, TbWorld } from "react-icons/tb"
 import YouTube from "react-youtube"
 import { Products } from "../components/Products"
 import { Earn } from "../components/Earn"
+import { Social } from "../components/Social"
+import { Blockchains } from "../components/Blockchains"
 
 const FeatItem = ({ title = '', desc = '' }) => (
   <HStack spacing={4} align="flex-start" _dark={{ bg: 'gray.900' }} p={6} rounded="md">
@@ -141,6 +143,10 @@ export default function Studio() {
       <Earn />      
 
       <Products />
+
+      <Social />
+
+      <Blockchains />
 
     </PublicLayout>
   )
