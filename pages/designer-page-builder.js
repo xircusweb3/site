@@ -74,7 +74,7 @@ export default function Designer() {
               <Image src="/magic-hat.gif" />
             </Box>
           </Stack>
-          <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }} gap={8}>
+          <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }} gap={{ base: 2, md: 8 }}>
             <CheckBox title="Fastest time to market" desc="Your dApp ready in minutes, not weeks" />
             <CheckBox title="For Every Industry" desc="Tailor your dApp for any niche or market with our flexible tools." />          
             <CheckBox title="Dynamic Modules" desc="Seamlessly integrate any payment solution, social features, and unique functionalities." />
@@ -88,7 +88,7 @@ export default function Designer() {
           <VStack textAlign="center" spacing={6}>
             <GradientHeading>Early bird gets the worm!</GradientHeading>
             <Heading size="sm" maxW={600} color="gray.500">Step into the world of Web3 with confidence. As 2030 approaches, it promises unparalleled opportunities and growth. Ensure your digital presence thrives in the decade to come.</Heading>
-            <Image src="/pages/infographics.png" maxW={800} />
+            <Image src="/pages/infographics.png" maxW={{ base: 'full', md: '800' }} />
           </VStack>
         </Container>
       </Box>
@@ -124,7 +124,7 @@ export default function Designer() {
           <Heading maxW={460} mb={6}>
             Modules & Blocks <GradientHeading as="span" display="">for Every dApp Desire</GradientHeading> 
           </Heading>
-          <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }} gap={6}>
+          <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} gap={6}>
             <ModuleItem 
               image="/pages/mod-buy-nfts.png"
               title="List / Mint / Buy / Sell NFTs" 
