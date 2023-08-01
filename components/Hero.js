@@ -5,6 +5,7 @@ import { random } from "maath"
 // import * as random from 'maath/random/dist/maath-random.esm'
 import { useTranslations } from "next-intl"
 import { useRef, useState } from "react"
+import { GradientHeading } from "./Gradient"
 
 const headingStyle = {
   size: {
@@ -65,8 +66,8 @@ export const Hero = () => {
     <Box id="intro" pos="relative" minH={{ base: 400, md: 600 }}>
       <Container maxW="container.xl" py={{ base: 20, md: 40 }}>
         <Box mb={{ base: 6, md: 8 }}>
-          <Heading {...headingStyle}><Box {...gradientTextStyle}>{t('title1')}</Box></Heading>
-          <Heading {...headingStyle}><Box {...gradientTextStyle}>{t('title2')}</Box>{t('title3')}</Heading>        
+          <GradientHeading size="3xl">{t('title1')}</GradientHeading>
+          <Heading size="3xl"><GradientHeading size="3xl">{t('title2')}</GradientHeading>{t('title3')}</Heading>        
           <Heading {...headingStyle} color="gray.500">{t('title4')}</Heading>
         </Box>
         <HStack spacing={0} w="full">
