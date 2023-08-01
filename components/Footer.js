@@ -1,9 +1,13 @@
-import { Box, Container, HStack, Spacer, Stack, Button, Text, Link, IconButton, Wrap, Grid, Heading, List, ListItem } from "@chakra-ui/react";
+import { Box, Container, HStack, Spacer, Stack, Button, Text, Link, 
+  IconButton, Wrap, Grid, Heading, List, ListItem,
+  Image
+} from "@chakra-ui/react";
 import {
   FaTelegramPlane, FaFacebook, FaTwitter, FaArrowUp,
   FaYoutube, FaGithub, FaInstagram, FaLinkedin
 } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
+import Script from "next/script";
 
 const socialLinks = [
   {
@@ -243,15 +247,26 @@ export const Footer = () => {
   const t = useTranslations('footer')
   return (
     <Box>
-      <Container maxW="container.xl" pb={100}>
-        <Grid templateColumns={{ base: 'auto', md: 'repeat(5, 1fr)' }} mb={24}>
+      <Container maxW="container.xl" pb={50}>
+        <Grid templateColumns={{ base: 'auto', md: 'repeat(5, 1fr)' }} mb={6}>
           <Links title={t('learn')} links={learnLinks} t={t} />
           <Links title={t('build')} links={buildLinks} t={t} />
           <Links title={t('explore')} links={exploreLinks} t={t} />          
           <Links title={t('participate')} links={participateLinks} t={t} />
           <Links title={t('resources')} links={resourceLinks} t={t} />
         </Grid>
-        <Stack direction={{ base: 'column', md: 'row' }}>
+        <Stack direction={{ base: 'column', md: 'row' }} mb={6}>
+          <Spacer />
+          <Image
+            onClick={() => logBadgeClick()} 
+            id="badge-button" 
+            src="https://static.alchemyapi.io/images/marketing/badge.png"
+            alt="Alchemy Supercharged" 
+            w={192} 
+            h={41}
+            />          
+        </Stack>
+        <Stack direction={{ base: 'column', md: 'row' }} gap={6} align="center">
           <HStack gap={2} justify="center">
             {
               socialLinks.map((link, linkKey) => <SocialLink {...link} key={linkKey} />)
@@ -261,7 +276,6 @@ export const Footer = () => {
           <Text fontSize="sm" textAlign={{ base: 'center', sm: 'inherit' }}>{t('name')}</Text>
         </Stack>
       </Container>
-
     </Box>
   )
 }

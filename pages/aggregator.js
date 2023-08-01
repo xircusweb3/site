@@ -7,9 +7,9 @@ export default function OpenCurr() {
   return (
     <PublicLayout>
       <HeroCustom 
-        overline="Open Currencies"
-        title="List and Pay with your Tokens"
-        desc="Add any ERC20 token as payment currency for your web3 apps"
+        overline="Aggregator"
+        title="Share Your NFTs To Global Marketplaces"
+        desc="Migrate or export your NFT collections to other marketplaces"
         />      
     </PublicLayout>
   )

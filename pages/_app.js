@@ -60,6 +60,7 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps, router }) {
   const messages = require(`../i18n/${router.locale}.json`)
+
   return (
     <NextIntlProvider messages={messages}>
       <ChakraProvider theme={theme} colorModeManager={localStorageManager}>
@@ -81,7 +82,7 @@ function MyApp({ Component, pageProps, router }) {
         </Head>
         <Script
           id="gta"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-X95EEBY9YK`}
           />
         <Script
@@ -89,6 +90,7 @@ function MyApp({ Component, pageProps, router }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
+            const BADGE_ID = '7ffd75638064e9e5';
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -114,6 +116,9 @@ function MyApp({ Component, pageProps, router }) {
           `,
           }}
           />               
+        <Script 
+          src="https://static.alchemyapi.io/scripts/badge/alchemy-badge.js"
+          />
         <Component {...pageProps} />
       </ChakraProvider>
     </NextIntlProvider>

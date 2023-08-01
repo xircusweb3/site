@@ -15,9 +15,9 @@ export default function Contracts() {
     <PublicLayout>
       <HeroCustom 
         overline="Contracts"
-        title="Xircus Web3 Protocol Utility Token"
-        desc="Unlimited Rewards, Pension and Deflationary by Utility"
-        />      
+        title="Create, Publish and Deploy Contracts"
+        desc="Manage, share or monetize smart contracts"
+        />
     </PublicLayout>
   )
 }
