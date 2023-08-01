@@ -3,12 +3,14 @@ import { HeroCustom } from "../components/HeroCustom"
 
 // Complimentary Products
 // Alternative Payment Currency for deployed Apps
+// Pension
 // Features
-// Staking
+// Staking Rewards
 // Tier Levels
 // Tokenomics
+// 
 
-export default function XW3() {
+export default function Skins() {
   return (
     <PublicLayout>
       <HeroCustom 

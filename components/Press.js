@@ -50,9 +50,11 @@ const PressLink = ({ url, name, image }) => (
 )
 
 export const Press = () => (
-  <Wrap align="center" justify="center" spacing={{ base: 8, md: 16 }} px={{ base: 4, md: 0 }}>
-    {
-      links.map((link, linkKey) => <PressLink {...link} key={linkKey} />)
-    }
-  </Wrap>
+  <Container maxW="container.lg">
+    <Wrap align="center" justify="center" spacing={{ base: 8, md: 16 }} px={{ base: 4, md: 0 }}>
+      {
+        links.map((link, linkKey) => <PressLink {...link} key={linkKey} />)
+      }
+    </Wrap>
+  </Container>
 )

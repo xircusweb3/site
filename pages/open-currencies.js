@@ -1,14 +1,9 @@
 import { PublicLayout } from "../layouts/PublicLayout"
 import { HeroCustom } from "../components/HeroCustom"
 
-// Complimentary Products
-// Alternative Payment Currency for deployed Apps
-// Features
-// Staking
-// Tier Levels
-// Tokenomics
+// Listing currencies for free
 
-export default function XW3() {
+export default function OpenCurr() {
   return (
     <PublicLayout>
       <HeroCustom 

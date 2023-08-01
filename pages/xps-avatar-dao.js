@@ -3,16 +3,18 @@ import { HeroCustom } from "../components/HeroCustom"
 
 // Complimentary Products
 // Alternative Payment Currency for deployed Apps
+// Pension
 // Features
-// Staking
+// Staking Rewards
 // Tier Levels
 // Tokenomics
+// 
 
-export default function XW3() {
+export default function Punks() {
   return (
     <PublicLayout>
       <HeroCustom 
-        overline="XW3"
+        overline="XPS"
         title="Xircus Web3 Protocol Utility Token"
         desc="Unlimited Rewards, Pension and Deflationary by Utility"
         />      

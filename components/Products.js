@@ -38,7 +38,7 @@ const prods = [
   {
     key: 'avatars',
     image: 'punks-product-icon.png',
-    link: '/xps-dao-avatars'
+    link: '/xps-avatar-dao'
   },
   {
     key: 'skins',
@@ -58,7 +58,7 @@ const prods = [
   {
     key: 'currencies',
     image: 'token-factory-product-icon.png',
-    link: '/platform-wide-currencies'
+    link: '/open-currencies'
   }  
 ]
 

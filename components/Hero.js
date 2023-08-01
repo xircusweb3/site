@@ -67,7 +67,7 @@ export const Hero = () => {
       <Container maxW="container.xl" py={{ base: 20, md: 40 }}>
         <Box mb={{ base: 6, md: 8 }}>
           <GradientHeading size="3xl">{t('title1')}</GradientHeading>
-          <Heading size="3xl"><GradientHeading size="3xl">{t('title2')}</GradientHeading>{t('title3')}</Heading>        
+          <Heading size="3xl"><GradientHeading size="3xl" as="span">{t('title2')}</GradientHeading>{t('title3')}</Heading>        
           <Heading {...headingStyle} color="gray.500">{t('title4')}</Heading>
         </Box>
         <HStack spacing={0} w="full">
