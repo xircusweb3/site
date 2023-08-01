@@ -8,6 +8,7 @@ import YouTube from "react-youtube"
 import { Products } from "../components/Products"
 import { Blockchains } from "../components/Blockchains"
 import { Social } from "../components/Social"
+import Head from "next/head"
 
 const CheckBox = ({ title, desc }) => (
   <VStack textAlign="center" borderWidth={1} p={6} justify="center" rounded="md" borderColor="#121924" bg="#0A0F15">
@@ -36,6 +37,9 @@ const ModuleItem = ({ title, desc, image }) => (
 export default function Designer() {
   return (
     <PublicLayout>
+      <Head>
+        <title>Xircus | Designer Page Builder</title>
+      </Head>
       <Container maxW="container.xl" py={24}>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">
           <Stack maxW={500} spacing={8}>
