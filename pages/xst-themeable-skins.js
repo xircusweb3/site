@@ -14,9 +14,11 @@ export default function Skins() {
   return (
     <PublicLayout>
       <HeroCustom 
-        overline="XW3"
-        title="Xircus Web3 Protocol Utility Token"
-        desc="Unlimited Rewards, Pension and Deflationary by Utility"
+        overline="XST"
+        title="Xircus Skins for your industry or business"
+        desc="Create, customize, share or monetize skins"
+        href="https://beta.xircus.app/skins"
+        link="Explore Skins"
         />      
     </PublicLayout>
   )

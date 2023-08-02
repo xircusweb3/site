@@ -17,6 +17,7 @@ export default function Contracts() {
         overline="Contracts"
         title="Create, Publish and Deploy Contracts"
         desc="Manage, share or monetize smart contracts"
+        href="https://beta.xircus.app/contracts/deploy"
         />
     </PublicLayout>
   )

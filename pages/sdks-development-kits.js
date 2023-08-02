@@ -27,6 +27,8 @@ export default function Home() {
         overline="SDKs"
         title="Build Apps using our Development Toolkits"
         desc="in a day by integrating easy to use development tools"
+        link="Explore SDKs"
+        href="https://www.npmjs.com/~xircusteam"
         />      
     </PublicLayout>
   )

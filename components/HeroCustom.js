@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl"
 import { TbArrowRightBar, TbExternalLink, TbArrowRight, TbArrowRightTail } from "react-icons/tb"
 import { GradientHeading } from "./Gradient"
 
-export const HeroCustom = ({ overline = '', title = 'Create, Deploy and Scale Your Web3 Experience', desc = 'in minutes' }) => {
+export const HeroCustom = ({ overline = '', title = 'Create, Deploy and Scale Your Web3 Experience', desc = 'in minutes', href = '#', link = 'Deploy Now' }) => {
   const t = useTranslations('hero')
   return (
     <Box id="intro" pos="relative" minH={{ base: 400, md: 600 }}>
@@ -13,8 +13,8 @@ export const HeroCustom = ({ overline = '', title = 'Create, Deploy and Scale Yo
           <GradientHeading as="h2" size="3xl">{title}</GradientHeading>
           <Heading size="md" color="gray.500">{desc}</Heading>
         </Stack>
-        <Button size="lg" rightIcon={<TbArrowRight />}>Deploy Now</Button>
-      </Container>        
+        <Button size="lg" rightIcon={<TbArrowRight />} as="a" target="_blank" href={href}>{link}</Button>
+      </Container>    
     </Box>
   )
 }

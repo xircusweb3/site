@@ -15,8 +15,10 @@ export default function Punks() {
     <PublicLayout>
       <HeroCustom 
         overline="XPS"
-        title="Xircus Web3 Protocol Utility Token"
-        desc="Unlimited Rewards, Pension and Deflationary by Utility"
+        title="Xircus Avatars with Premium Access"
+        desc="DAO Membership, Exclusive Discounts, Early Access Pass"
+        href="https://beta.xircus.app/punks"
+        link="Explore Avatars"
         />      
     </PublicLayout>
   )
