@@ -10,6 +10,13 @@ import { Products } from "../components/Products"
 import { Earn } from "../components/Earn"
 import { Social } from "../components/Social"
 import { Blockchains } from "../components/Blockchains"
+import { Whitelisting } from "../components/Whitelisting"
+
+const STUDIO_LINK = {
+  as: 'a',
+  target: '_blank',
+  href: 'https://beta.xircus.app'
+}
 
 const FeatItem = ({ title = '', desc = '' }) => (
   <HStack spacing={4} align="flex-start" _dark={{ bg: 'gray.900' }} p={6} rounded="md">
@@ -48,7 +55,7 @@ export default function Studio() {
           <GradientHeading size="4xl">Unleashing the Future</GradientHeading>
           <GradientHeading size="4xl">of Web3 Creation</GradientHeading>
           <Text fontSize="xl" py={6} color="gray.500">Xircus is an all-in-one low & no-code solution transforming the way Web3 dApps are created.</Text>
-          <GradientButton alignSelf="center" size="lg" fontSize={24} py={8} px={16}>Join Today</GradientButton>
+          <GradientButton alignSelf="center" size="lg" fontSize={24} py={8} px={16} {...STUDIO_LINK}>Join Today</GradientButton>
         </Stack>
         <Image src="/pages/studio-hero-1.png" />
       </Container>
@@ -113,7 +120,7 @@ export default function Studio() {
           </Box>
           <Text maxW={500} color="gray.500">Discover the Xircus edge. Dive into our unique offerings that set us apart in the Web3 realm, crafted to ensure you not only succeed but lead in the digital transformation journey.</Text>
         </Stack>
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={16}>
+        <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">
           <List spacing={2}>
             <FeatListItem title="Cost Efficiency" desc="Start at no cost and capitalize on our commission structure." />
             <FeatListItem title="Seamless Revenue Opportunities" desc="Partner with us and share revenue with our supportive backers." />            
@@ -147,6 +154,8 @@ export default function Studio() {
       <Social />
 
       <Blockchains />
+
+      <Whitelisting />
 
     </PublicLayout>
   )

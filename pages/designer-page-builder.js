@@ -3,12 +3,19 @@ import { HeroCustom } from "../components/HeroCustom"
 import { Box, Container, Grid, Heading, Image, Spacer, Stack, VStack, Icon, Text, AspectRatio, Button, Center } from "@chakra-ui/react"
 import { GradientHeading } from "../components/Gradient"
 import { GradientButton } from "../components/GradientButton"
-import { TbCheck } from "react-icons/tb"
+import { TbCheck, TbExternalLink } from "react-icons/tb"
 import YouTube from "react-youtube"
 import { Products } from "../components/Products"
 import { Blockchains } from "../components/Blockchains"
 import { Social } from "../components/Social"
 import Head from "next/head"
+import { Whitelisting } from "../components/Whitelisting"
+
+const DESIGNER_LINK = {
+  as: 'a',
+  target: '_blank',
+  href: 'https://designer.xircus.app'
+}
 
 const CheckBox = ({ title, desc }) => (
   <VStack textAlign="center" borderWidth={1} p={6} justify="center" rounded="md" borderColor="#121924" bg="#0A0F15">
@@ -49,7 +56,7 @@ export default function Designer() {
               Just Creativity.
             </Heading>
             <Heading size="sm" color="gray.500">Create the web&apos;s future using the palette of your imagination and join us in shaping tomorrow&apos;s digital landscape</Heading>
-            <GradientButton alignSelf="flex-start" size="lg" fontSize={24} py={8} px={16}>Join Today</GradientButton>            
+            <GradientButton alignSelf="flex-start" size="lg" fontSize={24} py={8} px={16} {...DESIGNER_LINK}>Join Today</GradientButton>            
           </Stack>
           <Spacer />
           <Box maxW={460}>
@@ -71,7 +78,7 @@ export default function Designer() {
                 </Heading>
               </Box>
               <Heading size="sm" color="gray.500">Dazzle with our intuitive builder and seamlessly integrate blockchain functionalities tailored for all creators - your Web3 canvas, empowered by Chakra UI, with no coding!</Heading>
-              <GradientButton alignSelf="flex-start" size="lg">Design Faster</GradientButton>            
+              <GradientButton alignSelf="flex-start" size="lg" {...DESIGNER_LINK}>Design Faster</GradientButton>            
             </Stack>
             <Spacer />
             <Box maxW={460}>
@@ -162,7 +169,7 @@ export default function Designer() {
           <YouTube videoId="cM7w4S9YdRo" opts={{ width: '100%', height: '100%' }} />
         </AspectRatio>
         <Center my={8}>
-          <GradientButton size="lg">Try Now</GradientButton>
+          <GradientButton size="lg" rightIcon={<TbExternalLink />} {...DESIGNER_LINK}>Try Now</GradientButton>
         </Center>
       </Container>      
 
@@ -172,6 +179,7 @@ export default function Designer() {
 
       <Blockchains />
 
+      <Whitelisting />
 
     </PublicLayout>
   )
