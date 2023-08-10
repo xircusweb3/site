@@ -47,6 +47,7 @@ export default function Designer() {
       <Head>
         <title>Xircus | Designer Page Builder</title>
       </Head>
+
       <Container maxW="container.xl" py={24}>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">
           <Stack maxW={500} spacing={8}>
