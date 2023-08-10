@@ -8,6 +8,7 @@ import { Social } from "../components/Social"
 import { Blockchains } from "../components/Blockchains"
 import { Whitelisting } from "../components/Whitelisting"
 import { TbArrowUpRight } from "react-icons/tb"
+import Head from "next/head"
 
 const SDK_LINK = {
   as: 'a',
@@ -37,6 +38,10 @@ const FeatItem = ({ image, title, desc }) => (
 export default function SDKs() {
   return (
     <PublicLayout>
+
+      <Head>
+        <title>Xircus | Software Development Kits</title>
+      </Head>
 
       <Container maxW="container.xl" py={24}>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">

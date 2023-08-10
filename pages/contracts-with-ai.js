@@ -8,6 +8,7 @@ import { Social } from "../components/Social"
 import { Blockchains } from "../components/Blockchains"
 import { Whitelisting } from "../components/Whitelisting"
 import { TbArrowUpRight } from "react-icons/tb"
+import Head from "next/head"
 
 // Complimentary Products
 // Alternative Payment Currency for deployed Apps
@@ -45,6 +46,10 @@ const FeatItem = ({ image, title, desc }) => (
 export default function Contracts() {
   return (
     <PublicLayout>
+
+      <Head>
+        <title>Xircus | Contracts with AI</title>
+      </Head>
 
       <Container maxW="container.xl" py={24}>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">
