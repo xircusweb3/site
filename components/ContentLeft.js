@@ -2,7 +2,7 @@ import { Box, Stack, Image, Text, Container } from "@chakra-ui/react";
 import { GradientHeading } from "./Gradient";
 
 export const ContentLeft = ({ image, title, desc }) => (
-  <Container maxW="container.xl" py={24}>
+  <Container maxW="container.xl" py={{ base: 12, md: 24 }}>
     <Stack direction={{ base: 'column', md: 'row' }} align="center" gap={12}>
       <Box w="full">
         <Image src={image} />

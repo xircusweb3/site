@@ -3,8 +3,8 @@ import { GradientHeading } from "./Gradient"
 import { GradientButton } from "./GradientButton"
 
 export const HeroMain = ({ image = '', overline = '', title = '', subtitle = '', desc = '', action = 'Try Now', href = '#' }) => (
-  <Container maxW="container.xl" py={24}>
-    <Stack direction={{ base: 'column', md: 'row' }} spacing={16} align="center">
+  <Container maxW="container.xl" py={{ base: 12, md: 24 }}>
+    <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 6, md: 12 }} align="center">
       <Stack maxW={500} spacing={4}>
         <Heading size="sm" letterSpacing={2} textTransform="uppercase">{overline}</Heading>
         <GradientHeading size="3xl">{title}</GradientHeading>
