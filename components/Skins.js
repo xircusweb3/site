@@ -27,8 +27,8 @@ export const Skins = () => {
           overflowX="auto" 
           pb="20px" 
           sx={{ 
-            '&::-webkit-scrollbar': { width: '6px', height: '6px', background: '#181818', borderRadius: '2px' },
-            '&::-webkit-scrollbar-thumb': { background: '#fff', borderRadius: '2px' },
+            '&::-webkit-scrollbar': { width: '6px', height: '6px', background: '#718096', borderRadius: '2px' },
+            '&::-webkit-scrollbar-thumb': { background: '#718096', borderRadius: '2px' },
           }} scrollSnapType="x mandatory" gap={4}>
           {
             (skins || []).filter(s => s.appType == 'Marketplace').map(skin => <SkinCard key={skin._id} {...skin} />)
