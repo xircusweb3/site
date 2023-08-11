@@ -14,8 +14,8 @@ export const Whitelisting = () => (
           <GradientButton alignSelf="flex-start" size="lg" as="a" target="_blank" href="https://forms.gle/3W8upAmXMmqXK2fCA">Join NOW</GradientButton>
         </Stack>
         <Box w="full">
-          <Box p={4} backdropFilter="blur(20px)" bg="rgba(255,255,255,0.1)" rounded="lg" shadow="base">
-            <Image src="/pages/whitelist.png" />
+          <Box p={4}rounded="lg" shadow="base">
+            <Image src="/pages/punks-hero-2.png" />
           </Box>
         </Box>
       </Stack>

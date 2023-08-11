@@ -12,6 +12,7 @@ import { Products } from "../components/Products"
 import { Blockchains } from "../components/Blockchains"
 import { Whitelisting } from "../components/Whitelisting"
 import { Social } from "../components/Social"
+import { Token } from "../components/Token"
 
 // Complimentary Products
 // Alternative Payment Currency for deployed Apps
@@ -65,6 +66,8 @@ export default function Punks() {
         />
 
       <PlatformEconomy />
+
+      <Token />
 
       <Products />
 

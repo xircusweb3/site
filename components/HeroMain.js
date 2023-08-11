@@ -16,5 +16,5 @@ export const HeroMain = ({ image = '', overline = '', title = '', subtitle = '',
         <Image src={image} />
       </Box>
     </Stack>
-  </Container>        
+  </Container>
 )

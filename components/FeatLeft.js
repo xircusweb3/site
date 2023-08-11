@@ -1,4 +1,4 @@
-import { List, Stack, Image, Container, ListItem, Heading, Text, VStack } from "@chakra-ui/react";
+import { List, Stack, Image, Container, ListItem, Heading, Text, VStack, Box } from "@chakra-ui/react";
 import { GradientHeading } from "./Gradient";
 
 export const FeatItem = ({ title, desc }) => (
@@ -8,8 +8,8 @@ export const FeatItem = ({ title, desc }) => (
   </ListItem>
 )
 
-export const FeatLeft = ({ children, image, title }) => (
-  <Container maxW="container.xl">
+export const FeatLeft = ({ children, image, title, ...rest }) => (
+  <Container maxW="container.xl" {...rest}>
     <VStack mb={6}>
       <GradientHeading >{title}</GradientHeading>
     </VStack>
@@ -17,7 +17,9 @@ export const FeatLeft = ({ children, image, title }) => (
       <List w="full" spacing={4}>
         { children }
       </List>
-      <Image src={image} />
+      <Box w="full">
+        <Image src={image} />
+      </Box>
     </Stack>
   </Container>
 )

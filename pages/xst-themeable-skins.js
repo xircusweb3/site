@@ -10,6 +10,7 @@ import { Products } from "../components/Products"
 import { Social } from "../components/Social"
 import { Blockchains } from "../components/Blockchains"
 import { Whitelisting } from "../components/Whitelisting"
+import { Token } from "../components/Token"
 
 // Complimentary Products
 // Alternative Payment Currency for deployed Apps
@@ -61,6 +62,8 @@ export default function Skins() {
       </Container>      
 
       <PlatformEconomy />
+
+      <Token />
 
       <Products />
 
