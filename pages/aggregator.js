@@ -7,12 +7,18 @@ import { Products } from "../components/Products"
 import { Social } from "../components/Social"
 import { Blockchains } from "../components/Blockchains"
 import { Whitelisting } from "../components/Whitelisting"
+import Head from "next/head"
 
 // Listing currencies for free
 
 export default function Aggregator() {
   return (
     <PublicLayout>
+
+      <Head>
+        <title>Xircus | Aggregate Data From Deployed Web3 Apps</title>                
+      </Head>
+
       <HeroMain 
         overline="Xircus Aggregator"
         title="Unified Content Aggregators"
