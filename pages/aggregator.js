@@ -25,7 +25,7 @@ export default function Aggregator() {
         desc="They simplify the process of gathering data, content, or services, saving users time and effort while enhancing the efficiency of information consumption."
         link="Join Today"
         image="/pages/aggregator-hero-1.png"
-        />      
+        />
 
       <FeatLeft title="One Search, Every NFT Solution" image="/pages/aggregator-hero-2.png" py={24}>
         <FeatItem title="Unified NFT Search" desc="Seamlessly comb through multi-chain marketplaces with aggregated NFT data. Enhance NFT visibility and discoverability, all in one place." />

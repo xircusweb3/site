@@ -18,6 +18,7 @@ import { Token } from "../components/Token"
 import Script from 'next/script'
 import { ContractAI } from "../components/ContractAI"
 import { PublicLayout } from "../layouts/PublicLayout"
+import { Industries } from "../components/Industries"
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Press />
       <Solutions />
       <ContractAI />
+      <Industries />
       <Skins />
       <Blockchains />
       <Feats />
