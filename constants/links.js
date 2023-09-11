@@ -21,7 +21,8 @@ export const HEADER_LINKS = [
   },  
   {
     key: 'deck',
-    href: 'https://docsend.com/view/bdb8pjmsg2e9hfhm',
+    href: 'https://xircus-web3-protocol.gitbook.io/xircus-web3-protocol',
+    // href: 'https://docsend.com/view/bdb8pjmsg2e9hfhm',
     external: true
   },
   {

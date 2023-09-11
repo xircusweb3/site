@@ -7,10 +7,15 @@
     "resources": "RECURSOS",
     "earn": "COMO GANAR",
     "docs": "DOCUMENTOS",
-    "deck": "DECK",
+    "deck": "WHITEPAPER",
     "litepaper": "LITEPAPER",
     "investors": "INVERSORES",
-    "getStarted": "EMPEZAR"
+    "getStarted": "EMPEZAR",
+    "home": "HOGAR",
+    "studio": "STUDIO",
+    "designer": "DESIGNER",
+    "sdks": "SDKS",
+    "xw3": "XW3"
   },
   "skin": {
     "title": "Elige tu plantilla favorita",
@@ -165,7 +170,7 @@
     "hackatons": "Hackatons",
     "storage": "Almacenamiento",
     "about": "Acerca",
-    "deck": "Deck",
+    "deck": "Whitepaper",
     "pressKit": "Carpeta de prensa",
     "design": "Diseño",
     "terms": "Terminos y condiciones",

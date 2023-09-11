@@ -200,7 +200,7 @@ const participateLinks = [
 const resourceLinks = [
   {
     key: 'deck',
-    path: 'https://docsend.com/view/bdb8pjmsg2e9hfhm',
+    path: 'https://xircus-web3-protocol.gitbook.io/xircus-web3-protocol',
     target: '_blank'
   },  
   {
@@ -217,11 +217,11 @@ const resourceLinks = [
     path: 'https://xircus.medium.com/',
     target: '_blank'
   },
-  {
-    key: 'gitbook',
-    path: 'https://xircus-web3-protocol.gitbook.io/xircus-web3-protocol/',
-    target: '_blank'
-  },
+  // {
+  //   key: 'gitbook',
+  //   path: 'https://xircus-web3-protocol.gitbook.io/xircus-web3-protocol/',
+  //   target: '_blank'
+  // },
 ]
 
 const Links = ({ title, links = [], t }) => (
