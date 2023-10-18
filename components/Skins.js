@@ -6,8 +6,8 @@ import skins from './skins.json'
 const SkinCard = ({ name, slug }) => (
   <Box bg="#120F11" p={6} minW={200} rounded="md" as="a" href="https://designer.xircus.app" target="_blank">
     <Image 
-      src={`https://xw3.ams3.cdn.digitaloceanspaces.com/skins/${slug}-150.png`}
-      fallbackSrc="https://xw3.ams3.cdn.digitaloceanspaces.com/skins/marketgeneral-150.png"
+      src={`/skins/${slug}-150.png`}
+      fallbackSrc="/skins/marketgeneral-150.png"
       mb={4}
       />
     <Heading size="md" textAlign="center">{name}</Heading>

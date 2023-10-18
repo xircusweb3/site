@@ -15,6 +15,14 @@ const items = [
     title: 'Aurora',
   },
   {
+    image: 'base-white.png',
+    title: 'Base',
+  },
+  {
+    image: 'fantom-white.png',
+    title: 'Fantom',
+  },
+  {
     image: 'eth-white.png',
     title: 'Ethereum',
   },
@@ -25,10 +33,6 @@ const items = [
   {
     image: 'polygon-white.png',
     title: 'Polygon',
-  },
-  {
-    image: 'fantom-white.png',
-    title: 'Fantom',
   },
   {
     image: 'iotex-white.svg',
@@ -47,7 +51,11 @@ const items = [
     title: 'Celo',
   },
   {
-    image: 'xdai-white.png',
+    image: 'okx-white.png',
+    title: 'OKX',
+  },  
+  {
+    image: 'gnosis-white.png',
     title: 'Gnosis',
   },
   {
@@ -58,6 +66,10 @@ const items = [
     image: 'optimism-white.png',
     title: 'Optimism',
   },  
+  {
+    image: 'oasis-white.png',
+    title: 'Oasis',
+  },
   {
     image: 'moon-river-white.png',
     title: 'Moonriver',
@@ -79,6 +91,12 @@ const items = [
     disabled: true
   },
   {
+    image: 'tezos-white.png',
+    title: 'Tezos',
+    status: 'Soon',
+    disabled: true
+  },  
+  {
     image: 'solana-white.png',
     title: 'Solana',
     status: 'Soon',
@@ -96,6 +114,12 @@ const items = [
     status: 'Soon',
     disabled: true
   },
+  {
+    image: 'aptos-white.png',
+    title: 'Aptos',
+    status: 'Soon',
+    disabled: true
+  },  
 ]
 
 export const Blockchains = () => {
@@ -108,7 +132,7 @@ export const Blockchains = () => {
         <Heading size="md" color="gray.500" mb={2}>{t('subtitle')}</Heading>
         <Heading size="md" color="gray.500" mb={8}>{t('subtitle1')}</Heading>
         <Button as="a" variant="outline" rightIcon={<TbExternalLink />} borderColor="gray.100" _dark={{ borderColor: 'gray.900' }} href="https://beta.xircus.app/developers#chains" target="_blank">View All Supported Chains</Button>
-        <Wrap justify="center" spacing={6} py={10}>
+        <Wrap justify="center" spacing={3} py={10}>
           {
             items.map((item, itemKey) => (
               <Zoom key={itemKey}>
@@ -117,7 +141,7 @@ export const Blockchains = () => {
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.8 }}
                     minW="75px" cursor="pointer">
-                    <Image src={`../assets/images/blockchains/${item.image}`} h="50px" w="auto" alt={item.name} opacity={item.disabled ? '0.5' : '1'} />
+                    <Image my={2} src={`../assets/images/blockchains/${item.image}`} h="50px" w="auto" alt={item.name} opacity={item.disabled ? '0.5' : '1'} />
                     { item.status && <Badge borderRadius="full" colorScheme="green" fontSize="10px">{item.status}</Badge> }
                   </MotionVStack>
                 </Tooltip>

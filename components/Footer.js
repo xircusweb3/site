@@ -257,14 +257,9 @@ export const Footer = () => {
         </Grid>
         <Stack direction={{ base: 'column', md: 'row' }} mb={6}>
           <Spacer />
-          <Image
-            onClick={() => logBadgeClick()} 
-            id="badge-button" 
-            src="https://static.alchemyapi.io/images/marketing/badge.png"
-            alt="Alchemy Supercharged" 
-            w={192} 
-            h={41}
-            />          
+          <Box as="a" target="_blank" href="https://smoothie.so//product/development-softwares/web3-development-tools/xircus-web3-protocol/oyl0v9yl" bg="gray.100" rounded="md" p={2}>
+            <Image src="https://smoothie-awards.s3.us-west-1.amazonaws.com/projects/icons/b503b538-f557-4531-ad88-76a059199b82.png" h="100px" w="auto" />
+          </Box>
         </Stack>
         <Stack direction={{ base: 'column', md: 'row' }} gap={6} align="center">
           <HStack gap={2} justify="center">
@@ -273,6 +268,14 @@ export const Footer = () => {
             }
           </HStack>
           <Spacer />
+          <Image
+            onClick={() => logBadgeClick()} 
+            id="badge-button" 
+            src="https://static.alchemyapi.io/images/marketing/badge.png"
+            alt="Alchemy Supercharged" 
+            w={192} 
+            h={41}
+            />              
           <Text fontSize="sm" textAlign={{ base: 'center', sm: 'inherit' }}>{t('name')}</Text>
         </Stack>
       </Container>
