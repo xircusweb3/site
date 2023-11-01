@@ -73,7 +73,7 @@ export const Team = () => {
               avatar={`${TEAM_ASSETS}evan.png`}
               name="Evan Luthra" 
               desc="Forbes 30 under 30, Angel Investor and Advisor to 400+ Web3 Companies over $100B Market Cap, 2.4M+ Followers"
-              href="https://uk.linkedin.com/in/ianscarffe"
+              href="https://www.instagram.com/evanluthra"
               />
             <Member 
               avatar={`${TEAM_ASSETS}scarffe.png`}
