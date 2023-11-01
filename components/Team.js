@@ -1,6 +1,6 @@
 import {
   Avatar, Box, Container, Grid, Stack,
-  Heading, HStack, VStack, Text,
+  Heading, HStack, VStack, Text, Wrap, Flex,
 } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import { Slide, Fade, Flip } from 'react-awesome-reveal'
@@ -9,15 +9,15 @@ const Founder = ({ avatar, name, role, href = '/' }) => (
   <Fade top cascade>
     <Stack align="center" gap={2}  transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
       <Avatar border={0} boxSize="160px" src={avatar} />
-      <Heading size="lg">{name}</Heading>
-      <Heading size="md" color="gray.500">{role}</Heading>
+      <Heading size="md">{name}</Heading>
+      <Heading size="sm" color="gray.500">{role}</Heading>
     </Stack>
   </Fade>
 )
 
 const Member = ({ avatar, name, role, desc, href = '/' }) => (
   <Fade top cascade>
-    <Stack align="center" transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
+    <Stack maxW={340} align="center" transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
       <Avatar border={0} boxSize="100px" src={avatar} />
       <Heading size="md">{name}</Heading>
       {role && <Heading size="sm" color="gray.500">{role}</Heading> }
@@ -34,7 +34,7 @@ export const Team = () => {
     <Box py={40} id="team">
       <Container maxW="container.lg" centerContent textAlign="center">
         <Box mb={10}>
-          <Grid templateColumns={{ base: 'auto', md: 'repeat(3, 1fr)' }} mb={16}>
+          <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }} mb={16}>
               <Founder 
                 avatar={`${TEAM_ASSETS}falco.png`} 
                 name="Falco Pangkey" 
@@ -52,44 +52,28 @@ export const Team = () => {
                 name="Erik de Groot" 
                 role="COO"
                 href="http://www.linkedin.com/in/erikmdegroot"
-                />            
-          </Grid>
-          <Box py={24}>
-            <Heading mb={6} size="lg">Team Leaders</Heading>          
-            <Stack direction={{ base: 'column', md: 'row' }} align="center" justify="center">
-              <Member 
+                />         
+              <Founder 
                 avatar={`${TEAM_ASSETS}thea.png`} 
                 name="Thea WR" 
                 role="Operations Lead"
                 href="https://www.linkedin.com/in/theawr"
-                />
-              <Member 
-                avatar={`${TEAM_ASSETS}juan.png`} 
-                name="Juan Ochoa" 
-                role="LatAm Lead"
-                href="https://www.linkedin.com/in/#"
-                />                
-              <Member 
-                avatar={`${TEAM_ASSETS}diegos.png`} 
-                name="Diego Layola" 
-                role="LatAm Community Lead"
-                href="https://www.linkedin.com/in/#"
-                />
-              <Member 
-                avatar={`${TEAM_ASSETS}kangnian.png`} 
-                name="Kangnian" 
-                role="China Community Lead"
-                href="https://www.linkedin.com/in/#"
-                />                
-            </Stack>
-          </Box>
+                />                          
+          </Grid>
+
           <Heading mb={6} size="lg">Advisors</Heading>          
-          <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }}>
+          <Wrap spacing={8} justify="center" py={8}>
             <Member 
               avatar={`${TEAM_ASSETS}hung.png`} 
               name="Jason Hung" 
               desc="#1 ICO Advisor China Markets"
               href="https://tw.linkedin.com/in/jasonhung-earth"
+              />
+            <Member 
+              avatar={`${TEAM_ASSETS}evan.png`}
+              name="Evan Luthra" 
+              desc="Forbes 30 under 30, Angel Investor and Advisor to 400+ Web3 Companies over $100B Market Cap, 2.4M+ Followers"
+              href="https://uk.linkedin.com/in/ianscarffe"
               />
             <Member 
               avatar={`${TEAM_ASSETS}scarffe.png`}
@@ -109,7 +93,7 @@ export const Team = () => {
               desc="Adviced 100+ Blockchain projects"
               href="https://www.linkedin.com/in/chmirfan/"
               />                            
-          </Grid>          
+          </Wrap>          
         </Box>
       </Container>
     </Box>
@@ -132,3 +116,34 @@ name="John Etetim Udoh"
 role="Community Lead"
 href="https://www.linkedin.com/in/john-udoh/"
 /> */}
+
+
+  // <Box py={24}>
+  // <Heading mb={6} size="lg">Team Leaders</Heading>          
+  // <Stack direction={{ base: 'column', md: 'row' }} align="center" justify="center">
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}thea.png`} 
+  //     name="Thea WR" 
+  //     role="Operations Lead"
+  //     href="https://www.linkedin.com/in/theawr"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}juan.png`} 
+  //     name="Juan Ochoa" 
+  //     role="LatAm Lead"
+  //     href="https://www.linkedin.com/in/#"
+  //     />                
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}diegos.png`} 
+  //     name="Diego Layola" 
+  //     role="LatAm Community Lead"
+  //     href="https://www.linkedin.com/in/#"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}kangnian.png`} 
+  //     name="Kangnian" 
+  //     role="China Community Lead"
+  //     href="https://www.linkedin.com/in/#"
+  //     />                
+  // </Stack>
+  // </Box>
