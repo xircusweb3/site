@@ -7,7 +7,7 @@ import { Slide, Fade, Flip } from 'react-awesome-reveal'
 
 const Founder = ({ avatar, name, role, href = '/' }) => (
   <Fade top cascade>
-    <Stack align="center" gap={2}  transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
+    <Stack w={{ base: 'auto', md: 300 }} p={4} align="center" gap={2}  transition="all 250ms ease-out" _hover={{ transform: 'scale(1.1)' }} textAlign="center" {...(href ? { as: 'a', href, target: '_blank' } : {})} px={4}>
       <Avatar border={0} boxSize="160px" src={avatar} />
       <Heading size="md">{name}</Heading>
       <Heading size="sm" color="gray.500">{role}</Heading>
@@ -31,36 +31,42 @@ const TEAM_ASSETS = '../assets/team/'
 
 export const Team = () => {
   return (
-    <Box py={40} id="team">
+    <Box py={40} pt={{ base: 20, md: 40 }} id="team">
       <Container maxW="container.lg" centerContent textAlign="center">
         <Box mb={10}>
-          <Grid templateColumns={{ base: 'auto', md: 'repeat(4, 1fr)' }} mb={16}>
-              <Founder 
-                avatar={`${TEAM_ASSETS}falco.png`} 
-                name="Falco Pangkey" 
-                role="CEO"
-                href="https://www.linkedin.com/in/falcopangkey/"
-                />
-              <Founder 
-                avatar={`${TEAM_ASSETS}mikey.png`}
-                name="Michael Molina" 
-                role="CTO"
-                href="https://www.linkedin.com/in/drybfounder/"
-                />
-              <Founder 
-                avatar={`${TEAM_ASSETS}erik.png`} 
-                name="Erik de Groot" 
-                role="COO"
-                href="http://www.linkedin.com/in/erikmdegroot"
-                />         
-              <Founder 
-                avatar={`${TEAM_ASSETS}thea.png`} 
-                name="Thea WR" 
-                role="Operations Lead"
-                href="https://www.linkedin.com/in/theawr"
-                />                          
-          </Grid>
-
+          <Heading mb={6} size="lg">Founding Team</Heading>                    
+          <Wrap mb={24} px={8} justify="center">
+            <Founder 
+              avatar={`${TEAM_ASSETS}falco.png`} 
+              name="Falco Pangkey" 
+              role="CEO"
+              href="https://www.linkedin.com/in/falcopangkey/"
+              />
+            <Founder 
+              avatar={`${TEAM_ASSETS}mikey.png`}
+              name="Michael Molina" 
+              role="CTO"
+              href="https://www.linkedin.com/in/drybfounder/"
+              />
+            <Founder 
+              avatar={`${TEAM_ASSETS}erik.png`} 
+              name="Erik de Groot" 
+              role="COO"
+              href="http://www.linkedin.com/in/erikmdegroot"
+              />         
+            <Founder 
+              avatar={`${TEAM_ASSETS}thea.png`} 
+              name="Thea WR" 
+              role="Operations Lead"
+              href="https://www.linkedin.com/in/theawr"
+              />                          
+            <Founder 
+              avatar={`${TEAM_ASSETS}charles.png`} 
+              name="Charles Tan" 
+              role="CSO"
+              href="https://www.linkedin.com/in/charlestmz"
+              />     
+          </Wrap>
           <Heading mb={6} size="lg">Advisors</Heading>          
           <Wrap spacing={8} justify="center" py={8}>
             <Member 
