@@ -1,4 +1,4 @@
-import { Box, Wrap, Image, Center, Tooltip } from '@chakra-ui/react'
+import { Box, Wrap, Image, Center, Tooltip, Container } from '@chakra-ui/react'
 import { GradientHeading } from './Gradient'
 
 const links = [
@@ -24,7 +24,7 @@ const links = [
   },
   {
     name: 'Onramper',
-    image: 'onramper.png',
+    image: 'onramper.svg',
     url: 'https://onramper.com/'
   },
   {
@@ -47,13 +47,13 @@ const links = [
 const PressLink = ({ url, name, image }) => (
   <Box as="a" href={url} target="_blank">
     <Tooltip label={name}>
-      <Image h="80px" src={`../assets/partners/${image}`} alt={name} transition="all 400ms ease" _hover={{ opacity: 0.8, transform: 'scale(1.1)' }} />
+      <Image h={75} maxW={200} src={`../assets/partners/${image}`} alt={name} transition="all 400ms ease" _hover={{ opacity: 0.8, transform: 'scale(1.1)' }} />
     </Tooltip>
   </Box>
 )
 
 export const Partners = () => (
-  <Box py={16}>
+  <Container py={16} maxW="container.lg">
     <Center pb={8}>
       <GradientHeading>Our Partners</GradientHeading>
     </Center>
@@ -62,5 +62,5 @@ export const Partners = () => (
         links.map((link, linkKey) => <PressLink {...link} key={linkKey} />)
       }
     </Wrap>
-  </Box>
+  </Container>
 )
