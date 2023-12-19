@@ -8,19 +8,14 @@ const links = [
     url: 'https://xircus.medium.com/xircus-x-draper-startup-house-web3-hackathon-and-collaboration-initiative-b637c236a91b'
   },
   {
-    name: 'IoTeX Blockchain Ecosystem',
-    image: 'iotex.png',
-    url: 'https://twitter.com/Raullen/status/1631362440855445504'
-  },
-  {
-    name: 'Aurora EVM on Near Blockchain',
+    name: 'Aurora Blockchain',
     image: 'aurora.png',
     url: 'https://xircus.medium.com/xircus-web3-protocol-joins-forces-with-aurora-unlocking-new-possibilities-for-developers-bc725ea358ef'
   },
   {
-    name: 'MagikLabs Payment Aggregator',
-    image: 'magik-labs.png',
-    url: 'https://xircus.medium.com/xircus-x-magik-labs-breaking-down-the-barriers-bde3d5d612c6'
+    name: 'TON Blockchain',
+    image: 'ton-blockchain.png',
+    url: 'https://xircus.medium.com/implementing-ton-in-xircus-web3-protocol-telegram-mini-apps-in-minutes-9f85c76c281a'
   },
   {
     name: 'Onramper',
@@ -32,6 +27,51 @@ const links = [
     image: 'web3-arabs.png',
     url: 'https://xircus.medium.com/xircus-x-web3-arabs-when-theory-becomes-a-working-dapp-2ddb80dcd52f'
   },
+  {
+    name: 'IoTeX Blockchain Ecosystem',
+    image: 'iotex.png',
+    url: 'https://twitter.com/Raullen/status/1631362440855445504'
+  },
+  {
+    name: 'InnMind',
+    image: 'innmind.png',
+    url: 'https://xircus.medium.com/xircus-being-accelerated-by-innmind-web3-accelerator-fall-2023-cohort-c961e36b41d5'
+  },        
+  {
+    name: 'Gotbit',
+    image: 'gotbit.png',
+    url: 'https://gotbit.io'
+  },      
+  {
+    name: 'Telegram',
+    image: 'telegram.png',
+    url: 'https://ton.org/mini-apps'
+  },      
+  {
+    name: 'Alchemy',
+    image: 'alchemy.png',
+    url: 'https://www.alchemy.com'
+  },        
+  {
+    name: 'Hangry Animals',
+    image: 'hangry-animals.png',
+    url: 'https://hangryanimals.com'
+  },   
+  {
+    name: 'Eywa',
+    image: 'eywa.svg',
+    url: 'https://xircus.medium.com/xircus-and-eywa-join-forces-a-strategic-move-towards-efficient-liquidity-management-f0e8585314d6'
+  },      
+  {
+    name: 'Zealy',
+    image: 'zealy.png',
+    url: 'https://zealy.io/c/xircus/questboard'
+  },  
+  {
+    name: 'Smoothie',
+    image: 'smoothie.png',
+    url: 'https://smoothie.so/product/development-softwares/xircus-web3-protocol/oyl0v9yl'
+  },    
   {
     name: 'Pinksale',
     image: 'pinksale-white.png',
