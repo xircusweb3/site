@@ -23,6 +23,11 @@ const links = [
     url: 'https://xircus.medium.com/xircus-x-magik-labs-breaking-down-the-barriers-bde3d5d612c6'
   },
   {
+    name: 'Onramper',
+    image: 'onramper.png',
+    url: 'https://onramper.com/'
+  },
+  {
     name: 'Web3 Arabs Education Platform',
     image: 'web3-arabs.png',
     url: 'https://xircus.medium.com/xircus-x-web3-arabs-when-theory-becomes-a-working-dapp-2ddb80dcd52f'
