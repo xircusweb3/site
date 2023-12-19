@@ -29,9 +29,14 @@ const links = [
   },
   {
     name: 'Pinksale',
-    image: 'pinksale.png',
+    image: 'pinksale-white.png',
     url: 'https://www.pinksale.finance/'
   },  
+  {
+    name: 'DEXView',
+    image: 'dexview.png',
+    url: 'https://www.dexview.com'
+  },    
 ]
 
 const PressLink = ({ url, name, image }) => (
