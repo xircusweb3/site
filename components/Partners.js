@@ -27,6 +27,11 @@ const links = [
     image: 'web3-arabs.png',
     url: 'https://xircus.medium.com/xircus-x-web3-arabs-when-theory-becomes-a-working-dapp-2ddb80dcd52f'
   },
+  {
+    name: 'Pinksale',
+    image: 'pinksale.png',
+    url: 'https://www.pinksale.finance/'
+  },  
 ]
 
 const PressLink = ({ url, name, image }) => (
