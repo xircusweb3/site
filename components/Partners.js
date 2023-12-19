@@ -28,11 +28,6 @@ const links = [
     url: 'https://xircus.medium.com/xircus-x-web3-arabs-when-theory-becomes-a-working-dapp-2ddb80dcd52f'
   },
   {
-    name: 'IoTeX Blockchain Ecosystem',
-    image: 'iotex.png',
-    url: 'https://twitter.com/Raullen/status/1631362440855445504'
-  },
-  {
     name: 'InnMind',
     image: 'innmind.png',
     url: 'https://xircus.medium.com/xircus-being-accelerated-by-innmind-web3-accelerator-fall-2023-cohort-c961e36b41d5'
@@ -82,6 +77,11 @@ const links = [
     image: 'dexview.png',
     url: 'https://www.dexview.com'
   },    
+  {
+    name: 'IoTeX Blockchain',
+    image: 'iotex.png',
+    url: 'https://twitter.com/Raullen/status/1631362440855445504'
+  }
 ]
 
 const PressLink = ({ url, name, image }) => (
