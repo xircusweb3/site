@@ -67,44 +67,46 @@ export const Team = () => {
               href="https://www.linkedin.com/in/charlestmz"
               />     
           </Wrap>
-          <Heading mb={6} size="lg">Advisors</Heading>          
-          <Wrap spacing={8} justify="center" py={8}>
-            <Member 
-              avatar={`${TEAM_ASSETS}hung.png`} 
-              name="Jason Hung" 
-              desc="#1 ICO Advisor China Markets"
-              href="https://tw.linkedin.com/in/jasonhung-earth"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}evan.png`}
-              name="Evan Luthra" 
-              desc="Forbes 30 under 30, Angel Investor and Advisor to 400+ Web3 Companies over $100B Market Cap, 2.4M+ Followers"
-              href="https://www.instagram.com/evanluthra"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}scarffe.png`}
-              name="Ian Scarffe" 
-              desc="#1 Ranked ICO Advisor"
-              href="https://uk.linkedin.com/in/ianscarffe"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}khan.png`} 
-              name="Hamza Khan" 
-              desc="Top Ranked ICO Advisor"
-              href="https://www.linkedin.com/in/hamzaxkh/"
-              />
-            <Member 
-              avatar={`${TEAM_ASSETS}irfan.png`} 
-              name="Muhammad Irfan" 
-              desc="Adviced 100+ Blockchain projects"
-              href="https://www.linkedin.com/in/chmirfan/"
-              />                            
-          </Wrap>          
+   
         </Box>
       </Container>
     </Box>
   )
 }
+
+  // <Heading mb={6} size="lg">Advisors</Heading>          
+  // <Wrap spacing={8} justify="center" py={8}>
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}hung.png`} 
+  //     name="Jason Hung" 
+  //     desc="#1 ICO Advisor China Markets"
+  //     href="https://tw.linkedin.com/in/jasonhung-earth"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}evan.png`}
+  //     name="Evan Luthra" 
+  //     desc="Forbes 30 under 30, Angel Investor and Advisor to 400+ Web3 Companies over $100B Market Cap, 2.4M+ Followers"
+  //     href="https://www.instagram.com/evanluthra"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}scarffe.png`}
+  //     name="Ian Scarffe" 
+  //     desc="#1 Ranked ICO Advisor"
+  //     href="https://uk.linkedin.com/in/ianscarffe"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}khan.png`} 
+  //     name="Hamza Khan" 
+  //     desc="Top Ranked ICO Advisor"
+  //     href="https://www.linkedin.com/in/hamzaxkh/"
+  //     />
+  //   <Member 
+  //     avatar={`${TEAM_ASSETS}irfan.png`} 
+  //     name="Muhammad Irfan" 
+  //     desc="Adviced 100+ Blockchain projects"
+  //     href="https://www.linkedin.com/in/chmirfan/"
+  //     />                            
+  // </Wrap>       
 
 // <User avatar={`${TEAM_ASSETS}utsav.png`} name="Utsav Kumar" role="Content Lead" />
 // <User avatar={`${TEAM_ASSETS}shafeeq.png`} name="Shafeeq Qureshi" role="Advisor (Middle East)" />
