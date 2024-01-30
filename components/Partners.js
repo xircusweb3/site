@@ -67,16 +67,16 @@ const links = [
     image: 'smoothie.png',
     url: 'https://smoothie.so/product/development-softwares/xircus-web3-protocol/oyl0v9yl'
   },    
-  {
-    name: 'Pinksale',
-    image: 'pinksale-white.png',
-    url: 'https://www.pinksale.finance/'
-  },  
-  {
-    name: 'DEXView',
-    image: 'dexview.png',
-    url: 'https://www.dexview.com'
-  },    
+  // {
+  //   name: 'Pinksale',
+  //   image: 'pinksale-white.png',
+  //   url: 'https://www.pinksale.finance/'
+  // },  
+  // {
+  //   name: 'DEXView',
+  //   image: 'dexview.png',
+  //   url: 'https://www.dexview.com'
+  // },    
   {
     name: 'IoTeX Blockchain',
     image: 'iotex.png',
